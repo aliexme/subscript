@@ -1,0 +1,32 @@
+{
+  "$schema": "./node_modules/@tramvai/cli/schema.json",
+  "projects": {
+    "subscript" : {
+      "name": "subscript",
+      "root": "src",
+      "type": "application",
+      "commands": {
+        "build": {
+          "options": {
+            "server": "src/index.ts",
+            "vendor": "src/vendor.ts"
+          },
+          "configurations": {
+            "sourceMap": true,
+            "modern": true,
+            "granularChunks": true,
+            "postcss": {
+              "config": "src/postcss"
+            }
+          }
+        },
+        "serve": {
+          "configurations": {
+            "hotRefresh": true,
+            "modern": true
+          }
+        }
+      }
+    }
+  }
+}
