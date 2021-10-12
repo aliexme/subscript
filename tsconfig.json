@@ -13,6 +13,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "noEmitOnError": true,
-    "importHelpers": true
+    "importHelpers": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*"]
+    }
   }
 }

@@ -1,8 +1,4 @@
 module.exports = {
-  tabWidth: 2,
+  ...require("prettier-config-tinkoff"),
   semi: false,
-  singleQuote: true,
-  trailingComma: 'es5',
-  arrowParens: 'always',
-  htmlWhitespaceSensitivity: 'strict',
 }

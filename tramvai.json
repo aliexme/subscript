@@ -17,6 +17,10 @@
             "granularChunks": true,
             "postcss": {
               "config": "src/postcss"
+            },
+            "alias": {
+              "modules": "./src/modules",
+              "components": "./src/components"
             }
           }
         },

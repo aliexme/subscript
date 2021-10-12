@@ -1,6 +1,5 @@
 import { createApp } from '@tramvai/core'
 import { CommonModule } from '@tramvai/module-common'
-import { SpaRouterModule } from '@tramvai/module-router'
 import { RenderModule } from '@tramvai/module-render'
 import { ServerModule } from '@tramvai/module-server'
 import { ErrorInterceptorModule } from '@tramvai/module-error-interceptor'
@@ -13,6 +12,8 @@ import {
   ResourceSlot,
 } from '@tramvai/tokens-render'
 
+import { RoutingModule } from 'modules/routing'
+
 import { Header } from './components/features/Header/Header'
 import { Footer } from './components/features/Footer/Footer'
 import { globalAction } from './actions/globalAction'
@@ -21,21 +22,7 @@ createApp({
   name: 'subscript',
   modules: [
     CommonModule,
-    SpaRouterModule.forRoot([
-      // set a static route for the application, which will be available by https://localhost:3000/
-      {
-        name: 'main',
-        path: '/',
-      },
-      // set a static route for the application, which will be available by https://localhost:3000/second/
-      {
-        name: 'second',
-        path: '/second/',
-        config: {
-          pageComponent: 'subscript/second',
-        },
-      },
-    ]),
+    RoutingModule,
     RenderModule.forRoot({ mode: 'strict' }),
     SeoModule,
     ServerModule,
