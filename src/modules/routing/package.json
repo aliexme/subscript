@@ -1,5 +1,0 @@
-{
-  "name": "module-routing",
-  "main": "./server.ts",
-  "browser": "./client.ts"
-}

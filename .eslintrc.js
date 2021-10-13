@@ -9,4 +9,11 @@ module.exports = {
     "@tinkoff/eslint-config/jest",
     "plugin:@tinkoff/tramvai/recommended",
   ],
+  "rules": {
+    "import/order": ["error", {
+      "groups": [["builtin", "external"], "internal", ["parent", "sibling"], "index", "object"],
+      "newlines-between": "always-and-inside-groups",
+      "warnOnUnassignedImports": true,
+    }],
+  },
 }

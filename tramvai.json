@@ -19,7 +19,10 @@
               "config": "src/postcss"
             },
             "alias": {
+              "app": "./src/app",
+              "bundles": "./src/bundles",
               "modules": "./src/modules",
+              "pages": "./src/pages",
               "components": "./src/components"
             }
           }
