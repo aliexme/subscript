@@ -1,3 +1,5 @@
+import './styles/global.css'
+
 export * from './bundles'
 export * from './modules'
 export * from './providers'
