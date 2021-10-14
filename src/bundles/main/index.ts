@@ -7,7 +7,8 @@ import { Pages } from 'pages'
 export default createBundle({
   name: Bundles.MAIN,
   components: {
-    [Pages.MAIN]: lazy(() => import('pages/MainPage')),
-    [Pages.SECOND]: lazy(() => import('pages/SecondPage')),
+    [Pages.MAIN]: lazy(
+      () => import(/* webpackChunkName: "mainPage" */ 'pages/MainPage')
+    ),
   },
 })
