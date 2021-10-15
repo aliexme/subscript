@@ -8,7 +8,7 @@ export default createBundle({
   name: Bundles.MAIN,
   components: {
     [Pages.MAIN]: lazy(
-      () => import(/* webpackChunkName: "mainPage" */ 'pages/MainPage')
+      () => import(/* webpackChunkName: "mainPage" */ 'pages/MainPage/MainPage')
     ),
   },
 })
