@@ -6,11 +6,13 @@ import { ServerModule } from '@tramvai/module-server'
 
 import { AppRenderingModule } from './rendering'
 import { AppRoutingModule } from './routing'
+import { AppThemingModule } from './theming'
 
 export const appModules: (ModuleType | ExtendedModule)[] = [
   CommonModule,
   AppRenderingModule,
   AppRoutingModule,
+  AppThemingModule,
   SeoModule,
   ServerModule,
   ErrorInterceptorModule,

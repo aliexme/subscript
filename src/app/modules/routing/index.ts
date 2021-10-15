@@ -1,9 +1,5 @@
 import { Module, provide } from '@tramvai/core'
-import {
-  ROUTER_SPA_ACTIONS_RUN_MODE_TOKEN,
-  ROUTES_TOKEN,
-  SpaRouterModule,
-} from '@tramvai/module-router'
+import { ROUTER_SPA_ACTIONS_RUN_MODE_TOKEN, ROUTES_TOKEN, SpaRouterModule } from '@tramvai/module-router'
 
 import { Bundles } from 'bundles'
 
