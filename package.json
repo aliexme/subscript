@@ -13,6 +13,9 @@
     "test:integration:watch": "jest --runInBand --watch --config ./jest.integration.config.js"
   },
   "dependencies": {
+    "@emotion/react": "11.4.1",
+    "@emotion/styled": "11.3.0",
+    "@mui/material": "5.0.4",
     "@tramvai/core": "1.11.1",
     "@tramvai/module-common": "1.11.1",
     "@tramvai/module-error-interceptor": "1.11.1",
