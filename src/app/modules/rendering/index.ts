@@ -1,5 +1,14 @@
 import { Module, provide } from '@tramvai/core'
-import { RenderModule, RENDER_MODE, RENDER_SLOTS, ResourceSlot, ResourceType } from '@tramvai/module-render'
+import {
+  LAYOUT_OPTIONS,
+  RenderModule,
+  RENDER_MODE,
+  RENDER_SLOTS,
+  ResourceSlot,
+  ResourceType,
+} from '@tramvai/module-render'
+
+import { Layout } from '../../layout'
 
 @Module({
   imports: [RenderModule],
@@ -16,6 +25,17 @@ import { RenderModule, RENDER_MODE, RENDER_SLOTS, ResourceSlot, ResourceType } f
         slot: ResourceSlot.HEAD_META,
         payload: '<meta name="viewport" content="width=device-width, initial-scale=1">',
       },
+    }),
+    provide({
+      provide: LAYOUT_OPTIONS,
+      multi: true,
+      useValue: [
+        {
+          components: {
+            layout: Layout,
+          },
+        },
+      ],
     }),
   ],
 })
