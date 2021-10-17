@@ -8,7 +8,7 @@ import {
   ResourceType,
 } from '@tramvai/module-render'
 
-import { Layout } from '../../layout'
+import { layoutWrapper } from '../../layout'
 
 @Module({
   imports: [RenderModule],
@@ -31,8 +31,8 @@ import { Layout } from '../../layout'
       multi: true,
       useValue: [
         {
-          components: {
-            layout: Layout,
+          wrappers: {
+            layout: layoutWrapper,
           },
         },
       ],

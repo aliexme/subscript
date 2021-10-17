@@ -2,7 +2,7 @@ import { Module } from '@tramvai/core'
 
 import { commonProviders } from './providers'
 
-export * from './exports'
+export * from './index'
 
 @Module({
   imports: [],

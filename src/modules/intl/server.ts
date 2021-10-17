@@ -8,4 +8,4 @@ export * from './index'
   imports: [],
   providers: [...commonProviders],
 })
-export class ThemingModule {}
+export class IntlModule {}

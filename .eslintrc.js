@@ -16,4 +16,12 @@ module.exports = {
       "warnOnUnassignedImports": true,
     }],
   },
+  "overrides": [
+    {
+      "files": ["**/*.jsx", "**/*.tsx"],
+      "rules": {
+        "react/jsx-props-no-spreading": "off",
+      },
+    },
+  ],
 }
