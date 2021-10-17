@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@tramvai/cli/schema.json",
   "projects": {
-    "subscript" : {
+    "subscript": {
       "name": "subscript",
       "root": "src",
       "type": "application",
