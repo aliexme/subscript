@@ -22,8 +22,8 @@
               "app": "./src/app",
               "bundles": "./src/bundles",
               "modules": "./src/modules",
-              "pages": "./src/pages",
               "layout": "./src/layout",
+              "pages": "./src/pages",
               "shared": "./src/shared"
             }
           }
