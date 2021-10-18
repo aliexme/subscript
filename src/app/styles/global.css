@@ -2,8 +2,19 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   color: var(--primary-text-color);
   background-color: var(--primary-background-color);
+}
+
+:global(.application) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
 }
