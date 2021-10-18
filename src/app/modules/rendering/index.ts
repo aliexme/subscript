@@ -8,7 +8,7 @@ import {
   ResourceType,
 } from '@tramvai/module-render'
 
-import { layoutWrapper } from '../../layout'
+import { layoutWrapper } from 'layout'
 
 @Module({
   imports: [RenderModule],

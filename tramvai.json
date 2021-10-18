@@ -23,6 +23,7 @@
               "bundles": "./src/bundles",
               "modules": "./src/modules",
               "pages": "./src/pages",
+              "layout": "./src/layout",
               "shared": "./src/shared"
             }
           }
