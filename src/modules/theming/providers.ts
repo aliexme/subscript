@@ -6,7 +6,7 @@ import type { Provider } from '@tinkoff/dippy'
 
 import type { Theme } from './theme'
 import { DEFAULT_THEME_NAME_TOKEN, ROOT_THEME_ATTRIBUTE_TOKEN, THEMES_TOKEN } from './tokens'
-import { activeThemeNameReducer, setActiveThemeName } from './reducers'
+import { activeThemeNameReducer, setActiveThemeName } from './stores'
 import { defaultTheme, DEFAULT_THEME_NAME } from './themes'
 import { buildRootThemesInlineStyles } from './styles'
 

@@ -1,0 +1,13 @@
+.root {
+  display: flex;
+  flex-grow: 1;
+  padding: 8px;
+  padding-left: 0;
+  background-color: var(--secondary-background-color);
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 16px;
+  background-color: var(--primary-background-color);
+}

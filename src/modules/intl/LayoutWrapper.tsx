@@ -8,7 +8,7 @@ import { deepMerge } from 'shared/utils/objects'
 
 import type { IntlMessages } from './types'
 import { INTL_MESSAGES_TOKEN } from './tokens'
-import { activeIntlLocaleReducer } from './reducers'
+import { activeIntlLocaleReducer } from './stores'
 
 export const LayoutWrapper: React.FC = (props) => {
   const { children } = props
