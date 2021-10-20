@@ -21,7 +21,10 @@ export const AsideNavMenu: React.FC<Props> = (props) => {
     <nav className={className}>
       <List>
         <ListItemButton component={RouteLink} url={PagesPath.MAIN} selected={route.name === Pages.MAIN}>
-          <ListItemText primary={intl.formatMessage({ id: IntlTranslation.AsideMenuSubscriptionsItem })} />
+          <ListItemText primary={intl.formatMessage({ id: IntlTranslation.AsideMenuNavSubscriptionsItem })} />
+        </ListItemButton>
+        <ListItemButton component={RouteLink} url={PagesPath.SETTINGS} selected={route.name === Pages.SETTINGS}>
+          <ListItemText primary={intl.formatMessage({ id: IntlTranslation.AsideMenuNavSettingsItem })} />
         </ListItemButton>
       </List>
     </nav>

@@ -1,9 +1,7 @@
 import { Module, provide } from '@tramvai/core'
-import { ROUTER_SPA_ACTIONS_RUN_MODE_TOKEN, ROUTES_TOKEN, SpaRouterModule } from '@tramvai/module-router'
+import { ROUTER_SPA_ACTIONS_RUN_MODE_TOKEN, SpaRouterModule } from '@tramvai/module-router'
 
-import { Bundles } from 'bundles'
-
-import { Pages, PagesPath } from 'pages'
+import { pageProviders } from './pages'
 
 @Module({
   imports: [SpaRouterModule],
@@ -12,18 +10,7 @@ import { Pages, PagesPath } from 'pages'
       provide: ROUTER_SPA_ACTIONS_RUN_MODE_TOKEN,
       useValue: 'before',
     }),
-    provide({
-      provide: ROUTES_TOKEN,
-      multi: true,
-      useValue: {
-        name: Pages.MAIN,
-        path: PagesPath.MAIN,
-        config: {
-          bundle: Bundles.MAIN,
-          pageComponent: Pages.MAIN,
-        },
-      },
-    }),
+    ...pageProviders,
   ],
 })
 export class AppRoutingModule {}
