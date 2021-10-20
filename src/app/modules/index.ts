@@ -2,6 +2,7 @@ import type { ExtendedModule, ModuleType } from '@tramvai/core'
 import { CommonModule } from '@tramvai/module-common'
 import { ErrorInterceptorModule } from '@tramvai/module-error-interceptor'
 import { ServerModule } from '@tramvai/module-server'
+import { ClientHintsModule } from '@tramvai/module-client-hints'
 
 import { AppRenderingModule } from './rendering'
 import { AppRoutingModule } from './routing'
@@ -17,5 +18,6 @@ export const appModules: (ModuleType | ExtendedModule)[] = [
   AppIntlModule,
   AppSeoModule,
   ServerModule,
+  ClientHintsModule,
   ErrorInterceptorModule,
 ]

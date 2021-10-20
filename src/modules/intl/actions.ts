@@ -1,6 +1,6 @@
 import { createAction } from '@tramvai/core'
 
-import { setActiveIntlLocale } from './reducers'
+import { setActiveIntlLocale } from './stores'
 
 export const setActiveIntlLocaleAction = createAction({
   name: 'setActiveIntlLocaleAction',

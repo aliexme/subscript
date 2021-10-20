@@ -1,3 +1,5 @@
 import type { Provider } from '@tinkoff/dippy'
 
-export const appProviders: Provider[] = []
+import { storeProviders } from './stores'
+
+export const appProviders: Provider[] = [...storeProviders]

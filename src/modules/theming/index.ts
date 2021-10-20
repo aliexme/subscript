@@ -1,5 +1,5 @@
 export * from './tokens'
-export * from './reducers'
+export * from './stores'
 export * from './actions'
 export * from './theme'
 export * from './colors'

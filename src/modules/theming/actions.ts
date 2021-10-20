@@ -1,7 +1,7 @@
 import { createAction } from '@tramvai/core'
 
 import { ROOT_THEME_ATTRIBUTE_TOKEN } from './tokens'
-import { setActiveThemeName } from './reducers'
+import { setActiveThemeName } from './stores'
 
 export const setHTMLThemeAttributeAction = createAction({
   name: 'setHTMLThemeAttributeAction',

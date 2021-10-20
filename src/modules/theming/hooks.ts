@@ -3,7 +3,7 @@ import { useDi } from '@tramvai/react'
 
 import type { Theme } from './theme'
 import { THEMES_TOKEN } from './tokens'
-import { activeThemeNameReducer } from './reducers'
+import { activeThemeNameReducer } from './stores'
 import { defaultTheme } from './themes'
 
 export const useTheme = (): Theme => {
