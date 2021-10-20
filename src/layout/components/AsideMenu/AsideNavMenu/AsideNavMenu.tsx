@@ -19,11 +19,16 @@ export const AsideNavMenu: React.FC<Props> = (props) => {
 
   return (
     <nav className={className}>
-      <List>
+      <List disablePadding>
         <ListItemButton component={RouteLink} url={PagesPath.MAIN} selected={route.name === Pages.MAIN}>
           <ListItemText primary={intl.formatMessage({ id: IntlTranslation.AsideMenuNavSubscriptionsItem })} />
         </ListItemButton>
-        <ListItemButton component={RouteLink} url={PagesPath.SETTINGS} selected={route.name === Pages.SETTINGS}>
+        <ListItemButton
+          component={RouteLink}
+          url={PagesPath.SETTINGS}
+          selected={route.name === Pages.SETTINGS}
+          sx={{ marginTop: 0.5 }}
+        >
           <ListItemText primary={intl.formatMessage({ id: IntlTranslation.AsideMenuNavSettingsItem })} />
         </ListItemButton>
       </List>

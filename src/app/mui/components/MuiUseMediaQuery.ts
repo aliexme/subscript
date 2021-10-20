@@ -13,16 +13,10 @@ const createSsrMediaMatcher = (media: Media) => (query: string): { matches: bool
 
 const createMuiUseMediaQueryDefaultProps = (media: Media): ComponentsProps['MuiUseMediaQuery'] => {
   const ssrMatchMedia = createSsrMediaMatcher(media)
-
-  return {
-    ssrMatchMedia,
-  }
+  return { ssrMatchMedia }
 }
 
 export const createMuiUseMediaQueryComponent = (media: Media): Components['MuiUseMediaQuery'] => {
   const defaultProps = createMuiUseMediaQueryDefaultProps(media)
-
-  return {
-    defaultProps,
-  }
+  return { defaultProps }
 }
