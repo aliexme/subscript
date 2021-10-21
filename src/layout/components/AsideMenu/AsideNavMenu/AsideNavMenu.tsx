@@ -1,4 +1,5 @@
 import React from 'react'
+import { useActions } from '@tramvai/state'
 import { useRoute } from '@tramvai/module-router'
 import { useIntl } from 'react-intl'
 
@@ -6,6 +7,8 @@ import { IntlTranslation } from 'app/intl'
 import { Pages, PagesPath } from 'pages'
 import { List, ListItemButton, ListItemText } from 'shared/UIKit/List'
 import { RouteLink } from 'shared/routing'
+
+import { closeAsideMenuAction } from '../../../actions'
 
 type Props = {
   className?: string
@@ -16,17 +19,24 @@ export const AsideNavMenu: React.FC<Props> = (props) => {
 
   const intl = useIntl()
   const route = useRoute()
+  const closeAsideMenu = useActions(closeAsideMenuAction)
 
   return (
     <nav className={className}>
       <List disablePadding>
-        <ListItemButton component={RouteLink} url={PagesPath.MAIN} selected={route.name === Pages.MAIN}>
+        <ListItemButton
+          component={RouteLink}
+          url={PagesPath.MAIN}
+          selected={route.name === Pages.MAIN}
+          onClick={closeAsideMenu}
+        >
           <ListItemText primary={intl.formatMessage({ id: IntlTranslation.AsideMenuNavSubscriptionsItem })} />
         </ListItemButton>
         <ListItemButton
           component={RouteLink}
           url={PagesPath.SETTINGS}
           selected={route.name === Pages.SETTINGS}
+          onClick={closeAsideMenu}
           sx={{ marginTop: 0.5 }}
         >
           <ListItemText primary={intl.formatMessage({ id: IntlTranslation.AsideMenuNavSettingsItem })} />

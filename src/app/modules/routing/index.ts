@@ -8,7 +8,7 @@ import { pageProviders } from './pages'
   providers: [
     provide({
       provide: ROUTER_SPA_ACTIONS_RUN_MODE_TOKEN,
-      useValue: 'before',
+      useValue: 'after',
     }),
     ...pageProviders,
   ],
