@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { DesktopScreenVisibility, MobileScreenVisibility } from 'shared/screens'
+import { MOBILE_SCREEN_DOWN_BREAKPOINT, ScreenVisibility, TABLET_SCREEN_UP_BREAKPOINT } from 'shared/screens'
 
-import { MobileAsideMenu } from './MobileAsideMenu'
-import { DesktopAsideMenu } from './DesktopAsideMenu'
+import { TemporaryAsideMenu } from './TemporaryAsideMenu'
+import { PermanentAsideMenu } from './PermanentAsideMenu'
 
 export type AsideMenuProps = {
   className?: string
@@ -14,12 +14,12 @@ export const AsideMenu: React.FC<AsideMenuProps> = (props) => {
 
   return (
     <>
-      <MobileScreenVisibility>
-        <MobileAsideMenu className={className} />
-      </MobileScreenVisibility>
-      <DesktopScreenVisibility>
-        <DesktopAsideMenu className={className} />
-      </DesktopScreenVisibility>
+      <ScreenVisibility down={MOBILE_SCREEN_DOWN_BREAKPOINT}>
+        <TemporaryAsideMenu className={className} />
+      </ScreenVisibility>
+      <ScreenVisibility up={TABLET_SCREEN_UP_BREAKPOINT}>
+        <PermanentAsideMenu className={className} />
+      </ScreenVisibility>
     </>
   )
 }

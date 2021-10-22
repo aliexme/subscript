@@ -6,13 +6,13 @@ import { Drawer } from 'shared/UIKit/Drawer'
 
 import { AsideMenuContent } from '../AsideMenuContent'
 
-import styles from './MobileAsideMenu.css'
+import styles from './TemporaryAsideMenu.css'
 
 type Props = {
   className?: string
 }
 
-export const MobileAsideMenu: React.FC<Props> = (props) => {
+export const TemporaryAsideMenu: React.FC<Props> = (props) => {
   const { className } = props
 
   const asideMenuOpen = useStore(asideMenuOpenReducer)

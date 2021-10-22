@@ -1,4 +1,15 @@
 .root {
   display: flex;
   justify-content: flex-end;
+  padding-left: 8px;
+}
+
+.mainContent {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.closeAsideMenuButton {
+  margin-left: 8px;
 }
