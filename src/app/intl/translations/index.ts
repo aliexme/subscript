@@ -1,6 +1,6 @@
 export enum IntlTranslation {
-  AsideMenuNavSubscriptionsItem = 'AsideMenuNavSubscriptionsItem',
-  AsideMenuNavSettingsItem = 'AsideMenuNavSettingsItem',
+  AsideNavMenuSubscriptionsItem = 'AsideNavMenuSubscriptionsItem',
+  AsideNavMenuSettingsItem = 'AsideNavMenuSettingsItem',
 }
 
 export type IntlTranslations = Record<IntlTranslation, string>

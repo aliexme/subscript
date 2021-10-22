@@ -1,10 +1,10 @@
 import { createEvent, createReducer } from '@tramvai/state'
 
-export const setAsideMenuOpen = createEvent<boolean>('set aside menu open')
-export const openAsideMenu = createEvent('open aside menu')
-export const closeAsideMenu = createEvent('close aside menu')
+export const setAsideNavMenuOpen = createEvent<boolean>('set aside nav menu open')
+export const openAsideNavMenu = createEvent('open aside nav menu')
+export const closeAsideNavMenu = createEvent('close aside nav menu')
 
-export const asideMenuOpenReducer = createReducer<boolean>('asideMenuOpen', false)
-  .on(setAsideMenuOpen, (_state, open) => open)
-  .on(openAsideMenu, () => true)
-  .on(closeAsideMenu, () => false)
+export const asideNavMenuOpenReducer = createReducer<boolean>('asideNavMenuOpen', false)
+  .on(setAsideNavMenuOpen, (_state, open) => open)
+  .on(openAsideNavMenu, () => true)
+  .on(closeAsideNavMenu, () => false)

@@ -1,0 +1,9 @@
+.paperAnchorTop {
+  bottom: 0;
+}
+
+.docked, .paperAnchorDockedLeft {
+  width: 23%;
+  min-width: 248px;
+  max-width: 336px;
+}

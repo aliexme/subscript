@@ -2,19 +2,19 @@ import React from 'react'
 import { useActions } from '@tramvai/state'
 import MenuIcon from '@mui/icons-material/Menu'
 
-import { openAsideMenuAction } from 'layout'
+import { openAsideNavMenuAction } from 'layout'
 import { IconButton } from 'shared/UIKit/Button'
 import type { IconButtonProps } from 'shared/UIKit/Button'
 
-export type OpenAsideMenuButtonProps = IconButtonProps
+export type OpenAsideNavMenuButtonProps = IconButtonProps
 
-export const OpenAsideMenuButton: React.FC<OpenAsideMenuButtonProps> = (props) => {
+export const OpenAsideNavMenuButton: React.FC<OpenAsideNavMenuButtonProps> = (props) => {
   const { ...iconButtonProps } = props
 
-  const openAsideMenu = useActions(openAsideMenuAction)
+  const openAsideNavMenu = useActions(openAsideNavMenuAction)
 
   return (
-    <IconButton {...iconButtonProps} onClick={openAsideMenu}>
+    <IconButton {...iconButtonProps} onClick={openAsideNavMenu}>
       <MenuIcon />
     </IconButton>
   )

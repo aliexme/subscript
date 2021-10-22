@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import { styled } from '@mui/material/styles'
 import MuiIconButton from '@mui/material/IconButton'
 import type {
   IconButtonProps as MuiIconButtonProps,
@@ -24,23 +23,20 @@ export type IconButtonProps<
   }
 >
 
-const StyledMuiIconButton = styled(MuiIconButton)<IconButtonProps<any>>((props) => {
-  const { theme, shape = 'rounded' } = props
-
-  return {
-    ...(shape === 'rounded' && {
-      borderRadius: theme.shape.borderRadius,
-    }),
-  }
-})
-
 export const IconButton = <C extends React.ElementType>(props: React.PropsWithChildren<IconButtonProps<C>>) => {
-  const { wrapInPaper, PaperProps: IconButtonPaperProps, ...muiIconButtonProps } = props
-  const IconButtonBase = <StyledMuiIconButton centerRipple={false} {...muiIconButtonProps} />
+  const { wrapInPaper, shape = 'rounded', PaperProps, className, ...muiIconButtonProps } = props
+
+  const IconButtonBase = (
+    <MuiIconButton
+      centerRipple={false}
+      {...muiIconButtonProps}
+      className={classNames(shape === 'rounded' && styles.rounded, className)}
+    />
+  )
 
   if (wrapInPaper) {
     return (
-      <Paper {...IconButtonPaperProps} className={classNames(styles.paper, IconButtonPaperProps?.className)}>
+      <Paper {...PaperProps} className={classNames(styles.paperWrapper, PaperProps?.className)}>
         {IconButtonBase}
       </Paper>
     )

@@ -1,20 +1,20 @@
 import React from 'react'
 
-import { OpenAsideMenuButton } from 'features/asideMenu'
+import { OpenAsideNavMenuButton } from 'features/asideNavMenu'
 import { Box } from 'shared/UIKit/Box'
 import type { BoxProps } from 'shared/UIKit/Box'
-import { MOBILE_SCREEN_DOWN_BREAKPOINT, useScreenMatches } from 'shared/screens'
+import { TABLET_SCREEN_DOWN_BREAKPOINT, useScreenMatches } from 'shared/screens'
 
 type Props = BoxProps
 
 export const MainPageHeader: React.FC<Props> = (props) => {
   const { ...boxProps } = props
 
-  const openAsideMenuButtonVisible = useScreenMatches({ down: MOBILE_SCREEN_DOWN_BREAKPOINT })
+  const openAsideNavMenuButtonVisible = useScreenMatches({ down: TABLET_SCREEN_DOWN_BREAKPOINT })
 
-  if (!openAsideMenuButtonVisible) {
+  if (!openAsideNavMenuButtonVisible) {
     return null
   }
 
-  return <Box {...boxProps}>{openAsideMenuButtonVisible && <OpenAsideMenuButton wrapInPaper />}</Box>
+  return <Box {...boxProps}>{openAsideNavMenuButtonVisible && <OpenAsideNavMenuButton wrapInPaper />}</Box>
 }

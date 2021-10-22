@@ -1,24 +1,24 @@
 import { createAction } from '@tramvai/core'
 
-import { closeAsideMenu, openAsideMenu, setAsideMenuOpen } from './stores'
+import { closeAsideNavMenu, openAsideNavMenu, setAsideNavMenuOpen } from './stores'
 
-export const setAsideMenuOpenAction = createAction({
-  name: 'setAsideMenuOpenAction',
+export const setAsideNavMenuOpenAction = createAction({
+  name: 'setAsideNavMenuOpenAction',
   fn: (context, open: boolean) => {
-    context.dispatch(setAsideMenuOpen(open))
+    context.dispatch(setAsideNavMenuOpen(open))
   },
 })
 
-export const openAsideMenuAction = createAction({
-  name: 'openAsideMenuAction',
+export const openAsideNavMenuAction = createAction({
+  name: 'openAsideNavMenuAction',
   fn: (context) => {
-    context.dispatch(openAsideMenu())
+    context.dispatch(openAsideNavMenu())
   },
 })
 
-export const closeAsideMenuAction = createAction({
-  name: 'closeAsideMenuAction',
+export const closeAsideNavMenuAction = createAction({
+  name: 'closeAsideNavMenuAction',
   fn: (context) => {
-    context.dispatch(closeAsideMenu())
+    context.dispatch(closeAsideNavMenu())
   },
 })

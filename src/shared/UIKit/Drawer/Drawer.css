@@ -1,0 +1,5 @@
+.borderless {
+  :global(.MuiDrawer-paper) {
+    border: none;
+  }
+}

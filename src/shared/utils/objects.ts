@@ -29,3 +29,16 @@ export const deepMerge = <T extends ObjectType, S extends ObjectType>(
 
   return result as Overwrite<T, S>
 }
+
+export const filterUndefinedObjectValues = <T extends ObjectType>(obj: T): T => {
+  const result = {} as T
+
+  Object.keys(obj).forEach((key: keyof T) => {
+    const value = obj[key]
+    if (value !== undefined) {
+      result[key] = value
+    }
+  })
+
+  return result
+}

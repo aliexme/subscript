@@ -9,7 +9,7 @@ import { createMuiComponents } from './muiComponents'
 
 export const createMuiTheme = (theme: Theme, media: Media) => {
   const muiPalette = createMuiPalette(theme)
-  const muiShape = createMuiShape()
+  const muiShape = createMuiShape(theme)
   const muiComponents = createMuiComponents(muiShape, media)
 
   return createTheme({

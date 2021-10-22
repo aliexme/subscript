@@ -1,6 +1,0 @@
-.root {
-  display: flex;
-  flex-grow: 1;
-  padding: 8px;
-  background-color: var(--secondary-background-color);
-}
