@@ -7,7 +7,7 @@ export const StyledTitle = styled(Typography)((props) => {
 
   return {
     ...(gutterBottom && {
-      marginBottom: theme.spacing(1.5),
+      marginBottom: theme.spacing(2),
     }),
   }
 })
