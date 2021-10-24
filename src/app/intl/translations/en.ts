@@ -6,4 +6,5 @@ export const en: IntlTranslations = {
   [IntlTranslation.AsideNavMenuSettingsItem]: 'Settings',
   [IntlTranslation.SubscriptionsPageTitle]: 'Subscriptions',
   [IntlTranslation.SettingsPageTitle]: 'Settings',
+  [IntlTranslation.ThemeSettingsTitle]: 'Theme',
 }

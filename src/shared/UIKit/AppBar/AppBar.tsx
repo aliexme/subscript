@@ -1,10 +1,12 @@
 import React from 'react'
-import MuiAppBar from '@mui/material/AppBar'
 import type { AppBarProps as MuiAppBarProps, AppBarTypeMap as MuiAppBarTypeMap } from '@mui/material/AppBar'
+
+import { StyledMuiAppBar } from './styled'
+import type { StyledAppBarProps } from './styled'
 
 export type AppBarProps<C extends React.ElementType = MuiAppBarTypeMap['defaultComponent']> = MuiAppBarProps<
   C,
-  {
+  StyledAppBarProps & {
     component?: C
   }
 >
@@ -12,5 +14,5 @@ export type AppBarProps<C extends React.ElementType = MuiAppBarTypeMap['defaultC
 export const AppBar = <C extends React.ElementType>(props: React.PropsWithChildren<AppBarProps<C>>) => {
   const { ...muiAppBarProps } = props
 
-  return <MuiAppBar {...muiAppBarProps} />
+  return <StyledMuiAppBar {...muiAppBarProps} />
 }

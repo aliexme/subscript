@@ -25,7 +25,7 @@ export const PageAppBar: React.FC<PageAppBarProps> = (props) => {
   const isTemporaryAsideNavMenu = useScreenMatches({ down: ASIDE_NAV_MENU_TEMPORARY_DOWN_BREAKPOINT })
 
   return (
-    <AppBar position="static" color="transparent" elevation={0} {...appBarProps}>
+    <AppBar position="static" color="transparent" elevation={0} gutterBottom {...appBarProps}>
       <Toolbar disableGutters>
         {isTemporaryAsideNavMenu && <StyledOpenAsideNavMenuButton wrapInPaper />}
         <div className={styles.mainContent}>
