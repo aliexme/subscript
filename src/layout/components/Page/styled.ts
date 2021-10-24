@@ -12,7 +12,7 @@ export const StyledRoot = styled('div')(({ theme }) => ({
   },
 }))
 
-export const StyledMain = styled('main')(({ theme }) => ({
+export const StyledContent = styled('div')(({ theme }) => ({
   flexGrow: 1,
   padding: theme.spacing(2),
   borderRadius: theme.shape.borderRadius,

@@ -1,4 +1,4 @@
-import type { Shape } from '@mui/system'
+import type { Shape } from '@mui/system/createTheme/shape'
 
 import type { Theme } from 'modules/theming'
 

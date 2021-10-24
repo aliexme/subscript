@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { AsideNavMenu } from '../AsideNavMenu'
-import { StyledMain, StyledRoot } from './styled'
+import { StyledContent, StyledRoot } from './styled'
 
 export const Page: React.FC = (props) => {
   const { children } = props
@@ -9,7 +9,7 @@ export const Page: React.FC = (props) => {
   return (
     <StyledRoot>
       <AsideNavMenu />
-      <StyledMain>{children}</StyledMain>
+      <StyledContent>{children}</StyledContent>
     </StyledRoot>
   )
 }

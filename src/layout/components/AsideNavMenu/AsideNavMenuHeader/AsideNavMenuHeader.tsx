@@ -2,26 +2,28 @@ import React from 'react'
 import classNames from 'classnames'
 
 import { CloseAsideNavMenuButton } from 'features/asideNavMenu'
-import { Box } from 'shared/UIKit/Box'
-import type { BoxProps } from 'shared/UIKit/Box'
 import { Typography } from 'shared/UIKit/Typography'
-import { TABLET_SCREEN_DOWN_BREAKPOINT, useScreenMatches } from 'shared/screens'
+import { useScreenMatches } from 'shared/screens'
+
+import { ASIDE_NAV_MENU_TEMPORARY_DOWN_BREAKPOINT } from '../../../breakpoints'
 
 import styles from './AsideNavMenuHeader.css'
 
-type Props = BoxProps
+type Props = {
+  className?: string
+}
 
 export const AsideNavMenuHeader: React.FC<Props> = (props) => {
-  const { className, ...boxProps } = props
+  const { className } = props
 
-  const closeAsideNavMenuButtonVisible = useScreenMatches({ down: TABLET_SCREEN_DOWN_BREAKPOINT })
+  const isTemporaryAsideNavMenu = useScreenMatches({ down: ASIDE_NAV_MENU_TEMPORARY_DOWN_BREAKPOINT })
 
   return (
-    <Box {...boxProps} className={classNames(styles.root, className)}>
+    <div className={classNames(styles.root, className)}>
       <div className={styles.mainContent}>
-        <Typography variant="h5">Subscript</Typography>
+        <Typography variant={isTemporaryAsideNavMenu ? 'h5' : 'h6'}>Subscript</Typography>
       </div>
-      {closeAsideNavMenuButtonVisible && <CloseAsideNavMenuButton className={styles.closeAsideNavMenuButton} />}
-    </Box>
+      {isTemporaryAsideNavMenu && <CloseAsideNavMenuButton className={styles.closeAsideNavMenuButton} />}
+    </div>
   )
 }

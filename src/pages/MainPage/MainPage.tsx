@@ -1,13 +1,17 @@
 import React from 'react'
+import { useIntl } from 'react-intl'
 
-import { MainPageHeader } from './MainPageHeader/MainPageHeader'
+import { IntlTranslation } from 'app/intl'
+import { PageAppBar } from 'layout'
 
 export const MainPage = () => {
+  const intl = useIntl()
+
   return (
-    <div>
-      <MainPageHeader sx={{ marginBottom: 2 }} />
-      Main page
-    </div>
+    <>
+      <PageAppBar title={intl.formatMessage({ id: IntlTranslation.SubscriptionsPageTitle })} />
+      <main>Main page</main>
+    </>
   )
 }
 

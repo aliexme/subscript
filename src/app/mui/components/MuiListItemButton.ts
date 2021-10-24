@@ -1,5 +1,5 @@
-import type { Shape } from '@mui/system'
 import type { Components, ComponentsOverrides } from '@mui/material/styles'
+import type { Shape } from '@mui/system/createTheme/shape'
 
 const createMuiListItemButtonStyleOverrides = (shape: Shape): ComponentsOverrides['MuiListItemButton'] => {
   return {

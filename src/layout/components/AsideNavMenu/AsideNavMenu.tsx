@@ -1,9 +1,10 @@
 import React from 'react'
 import { useStore } from '@tramvai/state'
 
-import { asideNavMenuOpenReducer } from 'layout'
-import { TABLET_SCREEN_DOWN_BREAKPOINT, useScreenMatches } from 'shared/screens'
+import { useScreenMatches } from 'shared/screens'
 
+import { asideNavMenuOpenReducer } from '../../stores'
+import { ASIDE_NAV_MENU_TEMPORARY_DOWN_BREAKPOINT } from '../../breakpoints'
 import { AsideNavMenuContent } from './AsideNavMenuContent'
 import { StyledDrawer } from './styled'
 
@@ -17,13 +18,13 @@ export const AsideNavMenu: React.FC<AsideNavMenuProps> = (props) => {
   const { className } = props
 
   const asideNavMenuOpen = useStore(asideNavMenuOpenReducer)
-  const isTemporaryDrawer = useScreenMatches({ down: TABLET_SCREEN_DOWN_BREAKPOINT })
+  const isTemporaryAsideNavMenu = useScreenMatches({ down: ASIDE_NAV_MENU_TEMPORARY_DOWN_BREAKPOINT })
 
   return (
     <StyledDrawer
       open={asideNavMenuOpen}
-      variant={isTemporaryDrawer ? 'temporary' : 'permanent'}
-      anchor={isTemporaryDrawer ? 'top' : 'left'}
+      variant={isTemporaryAsideNavMenu ? 'temporary' : 'permanent'}
+      anchor={isTemporaryAsideNavMenu ? 'top' : 'left'}
       transitionDuration={300}
       keepMounted
       borderless

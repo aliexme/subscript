@@ -1,6 +1,6 @@
 import type { Media } from '@tramvai/module-client-hints'
-import type { Shape } from '@mui/system'
 import type { Components } from '@mui/material/styles'
+import type { Shape } from '@mui/system/createTheme/shape'
 
 import { createMuiPaperComponent } from './components/MuiPaper'
 import { createMuiListItemButtonComponent } from './components/MuiListItemButton'
