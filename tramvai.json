@@ -24,6 +24,7 @@
               "modules": "./src/modules",
               "layout": "./src/layout",
               "pages": "./src/pages",
+              "entities": "./src/entities",
               "features": "./src/features",
               "shared": "./src/shared"
             }

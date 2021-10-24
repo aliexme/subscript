@@ -6,4 +6,5 @@ export const ru: IntlTranslations = {
   [IntlTranslation.AsideNavMenuSettingsItem]: 'Настройки',
   [IntlTranslation.SubscriptionsPageTitle]: 'Подписки',
   [IntlTranslation.SettingsPageTitle]: 'Настройки',
+  [IntlTranslation.ThemeSettingsTitle]: 'Тема',
 }

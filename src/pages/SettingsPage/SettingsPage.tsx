@@ -3,6 +3,9 @@ import { useIntl } from 'react-intl'
 
 import { IntlTranslation } from 'app/intl'
 import { PageAppBar } from 'layout'
+import { Card, CardContent } from 'shared/UIKit/Card'
+
+import { ThemeSettings } from './ThemeSettings'
 
 export const SettingsPage = () => {
   const intl = useIntl()
@@ -10,7 +13,13 @@ export const SettingsPage = () => {
   return (
     <>
       <PageAppBar title={intl.formatMessage({ id: IntlTranslation.SettingsPageTitle })} />
-      <main>Settings page</main>
+      <main>
+        <Card>
+          <CardContent>
+            <ThemeSettings />
+          </CardContent>
+        </Card>
+      </main>
     </>
   )
 }

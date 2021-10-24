@@ -3,6 +3,7 @@ export enum IntlTranslation {
   AsideNavMenuSettingsItem = 'AsideNavMenuSettingsItem',
   SubscriptionsPageTitle = 'SubscriptionsPageTitle',
   SettingsPageTitle = 'SettingsPageTitle',
+  ThemeSettingsTitle = 'ThemeSettingsTitle',
 }
 
 export type IntlTranslations = Record<IntlTranslation, string>

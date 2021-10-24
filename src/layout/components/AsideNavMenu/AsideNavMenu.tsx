@@ -29,6 +29,7 @@ export const AsideNavMenu: React.FC<AsideNavMenuProps> = (props) => {
       keepMounted
       borderless
       SlideProps={{ appear: true }}
+      PaperProps={{ elevation: 0 }}
       classes={{
         docked: styles.docked,
         paperAnchorTop: styles.paperAnchorTop,

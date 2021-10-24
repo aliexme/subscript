@@ -27,6 +27,15 @@ import { Content, Layout, layoutWrapper, Page } from 'layout'
       },
     }),
     provide({
+      provide: RENDER_SLOTS,
+      multi: true,
+      useValue: {
+        type: ResourceType.style,
+        slot: ResourceSlot.HEAD_CORE_STYLES,
+        payload: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap',
+      },
+    }),
+    provide({
       provide: LAYOUT_OPTIONS,
       multi: true,
       useValue: [
