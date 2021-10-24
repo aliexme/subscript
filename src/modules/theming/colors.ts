@@ -1,3 +1,5 @@
+import { filterUndefinedObjectValues } from 'shared/utils/objects'
+
 export type ThemeColors = {
   primary: string
   primaryLight: string
@@ -64,9 +66,9 @@ const DEFAULT_THEME_COLORS: ThemeColors = {
   secondaryBackground: '#ffffff',
 }
 
-export const createThemeColors = (colors?: ThemeColorsOptions): ThemeColors => {
+export const createThemeColors = (colors: ThemeColorsOptions = {}): ThemeColors => {
   return {
     ...DEFAULT_THEME_COLORS,
-    ...colors,
+    ...filterUndefinedObjectValues(colors),
   }
 }

@@ -1,3 +1,7 @@
-.paper {
+.paperWrapper {
   display: inline-block;
+}
+
+.rounded {
+  border-radius: var(--border-radius);
 }

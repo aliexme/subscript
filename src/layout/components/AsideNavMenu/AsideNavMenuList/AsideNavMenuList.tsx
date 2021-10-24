@@ -1,25 +1,27 @@
 import React from 'react'
 import { useActions } from '@tramvai/state'
 import { useRoute } from '@tramvai/module-router'
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet'
+import SettingsIcon from '@mui/icons-material/Settings'
 import { useIntl } from 'react-intl'
 
 import { IntlTranslation } from 'app/intl'
 import { Pages, PagesPath } from 'pages'
-import { List, ListItemButton, ListItemText } from 'shared/UIKit/List'
+import { List, ListItemButton, ListItemIcon, ListItemText } from 'shared/UIKit/List'
 import { RouteLink } from 'shared/routing'
 
-import { closeAsideMenuAction } from '../../../actions'
+import { closeAsideNavMenuAction } from '../../../actions'
 
 type Props = {
   className?: string
 }
 
-export const AsideNavMenu: React.FC<Props> = (props) => {
+export const AsideNavMenuList: React.FC<Props> = (props) => {
   const { className } = props
 
   const intl = useIntl()
   const route = useRoute()
-  const closeAsideMenu = useActions(closeAsideMenuAction)
+  const closeAsideNavMenu = useActions(closeAsideNavMenuAction)
 
   return (
     <nav className={className}>
@@ -28,18 +30,24 @@ export const AsideNavMenu: React.FC<Props> = (props) => {
           component={RouteLink}
           url={PagesPath.MAIN}
           selected={route.name === Pages.MAIN}
-          onClick={closeAsideMenu}
+          onClick={closeAsideNavMenu}
         >
-          <ListItemText primary={intl.formatMessage({ id: IntlTranslation.AsideMenuNavSubscriptionsItem })} />
+          <ListItemIcon>
+            <AccountBalanceWalletIcon />
+          </ListItemIcon>
+          <ListItemText primary={intl.formatMessage({ id: IntlTranslation.AsideNavMenuSubscriptionsItem })} />
         </ListItemButton>
         <ListItemButton
           component={RouteLink}
           url={PagesPath.SETTINGS}
           selected={route.name === Pages.SETTINGS}
-          onClick={closeAsideMenu}
+          onClick={closeAsideNavMenu}
           sx={{ marginTop: 0.5 }}
         >
-          <ListItemText primary={intl.formatMessage({ id: IntlTranslation.AsideMenuNavSettingsItem })} />
+          <ListItemIcon>
+            <SettingsIcon />
+          </ListItemIcon>
+          <ListItemText primary={intl.formatMessage({ id: IntlTranslation.AsideNavMenuSettingsItem })} />
         </ListItemButton>
       </List>
     </nav>
