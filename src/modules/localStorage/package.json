@@ -1,0 +1,5 @@
+{
+  "name": "local-storage",
+  "main": "./server.ts",
+  "browser": "./client.ts"
+}

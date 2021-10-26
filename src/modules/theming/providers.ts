@@ -1,12 +1,13 @@
 import { commandLineListTokens, provide } from '@tramvai/core'
-import { COMBINE_REDUCERS, STORE_TOKEN } from '@tramvai/module-common'
+import { ACTION_EXECUTION_TOKEN, COMBINE_REDUCERS, STORE_TOKEN } from '@tramvai/module-common'
 import type { HtmlAttrs } from '@tramvai/module-render'
 import { HTML_ATTRS, RENDER_SLOTS, ResourceSlot, ResourceType } from '@tramvai/module-render'
 import type { Provider } from '@tinkoff/dippy'
 
 import type { Theme } from './theme'
 import { DEFAULT_THEME_NAME_TOKEN, ROOT_THEME_ATTRIBUTE_TOKEN, THEMES_TOKEN } from './tokens'
-import { activeThemeNameReducer, setActiveThemeName } from './stores'
+import { activeThemeNameReducer } from './stores'
+import { setActiveThemeNameAction } from './actions'
 import { defaultTheme, DEFAULT_THEME_NAME } from './themes'
 import { buildRootThemesInlineStyles } from './styles'
 
@@ -65,13 +66,13 @@ export const commonProviders: Provider[] = [
   provide({
     provide: commandLineListTokens.customerStart,
     multi: true,
-    useFactory: ({ store, defaultThemeName }) => {
+    useFactory: ({ actionExecution, defaultThemeName }) => {
       return () => {
-        store.dispatch(setActiveThemeName(defaultThemeName))
+        actionExecution.run(setActiveThemeNameAction, defaultThemeName)
       }
     },
     deps: {
-      store: STORE_TOKEN,
+      actionExecution: ACTION_EXECUTION_TOKEN,
       defaultThemeName: DEFAULT_THEME_NAME_TOKEN,
     },
   }),
