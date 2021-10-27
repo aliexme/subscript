@@ -1,11 +1,10 @@
 import { commandLineListTokens, Module, provide } from '@tramvai/core'
-import { STORE_TOKEN } from '@tramvai/module-common'
+import { COOKIE_MANAGER_TOKEN, STORE_TOKEN } from '@tramvai/module-common'
 
 import { activeThemeNameReducer, DEFAULT_THEME_NAME_TOKEN, THEMES_TOKEN, ThemingModule } from 'modules/theming'
-import { LOCAL_STORAGE_SERVICE_TOKEN } from 'modules/localStorage'
 
 import { darkTheme, lightTheme, LIGHT_THEME_NAME } from '../../themes'
-import { LocalStorageKey } from '../../localStorage'
+import { CookieKey } from '../../cookie'
 
 @Module({
   imports: [ThemingModule],
@@ -22,21 +21,27 @@ import { LocalStorageKey } from '../../localStorage'
     }),
     provide({
       provide: DEFAULT_THEME_NAME_TOKEN,
-      useValue: LIGHT_THEME_NAME,
+      useFactory: ({ cookie }) => {
+        const savedThemeName = cookie.get(CookieKey.THEME)
+        return savedThemeName ?? LIGHT_THEME_NAME
+      },
+      deps: {
+        cookie: COOKIE_MANAGER_TOKEN,
+      },
     }),
     provide({
       provide: commandLineListTokens.customerStart,
       multi: true,
-      useFactory: ({ store, localStorageService }) => {
+      useFactory: ({ store, cookie }) => {
         return () => {
           store.subscribe(activeThemeNameReducer, (newActiveThemeName) => {
-            localStorageService.setItem(LocalStorageKey.THEME, newActiveThemeName)
+            cookie.set({ name: CookieKey.THEME, value: newActiveThemeName })
           })
         }
       },
       deps: {
         store: STORE_TOKEN,
-        localStorageService: LOCAL_STORAGE_SERVICE_TOKEN,
+        cookie: COOKIE_MANAGER_TOKEN,
       },
     }),
   ],
