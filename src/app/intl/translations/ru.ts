@@ -8,4 +8,6 @@ export const ru: IntlTranslations = {
   [IntlTranslation.SettingsPageTitle]: 'Настройки',
   [IntlTranslation.ThemeSettingsTitle]: 'Тема',
   [IntlTranslation.LanguageSettingsTitle]: 'Язык',
+  [IntlTranslation.LightThemeName]: 'Светлая',
+  [IntlTranslation.DarkThemeName]: 'Темная',
 }

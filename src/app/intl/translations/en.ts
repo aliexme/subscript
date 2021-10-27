@@ -8,4 +8,6 @@ export const en: IntlTranslations = {
   [IntlTranslation.SettingsPageTitle]: 'Settings',
   [IntlTranslation.ThemeSettingsTitle]: 'Theme',
   [IntlTranslation.LanguageSettingsTitle]: 'Language',
+  [IntlTranslation.LightThemeName]: 'Light',
+  [IntlTranslation.DarkThemeName]: 'Dark',
 }

@@ -1,7 +1,9 @@
 import React from 'react'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
+import { FormattedMessage } from 'react-intl'
 
+import { IntlTranslation } from 'app/intl'
 import { darkTheme, lightTheme } from 'app/themes'
 import { ToggleButton, ToggleButtonGroup } from 'shared/UIKit/Button'
 import type { ToggleButtonGroupProps } from 'shared/UIKit/Button'
@@ -15,11 +17,11 @@ export const ThemeToggleButtonGroup: React.FC<ThemeToggleButtonGroupProps> = (pr
     <ToggleButtonGroup color="primary" {...toggleButtonGroupProps}>
       <ToggleButton value={lightTheme.name}>
         <LightModeIcon fontSize="small" />
-        {lightTheme.name}
+        <FormattedMessage id={IntlTranslation.LightThemeName} />
       </ToggleButton>
       <ToggleButton value={darkTheme.name}>
         <DarkModeIcon fontSize="small" />
-        {darkTheme.name}
+        <FormattedMessage id={IntlTranslation.DarkThemeName} />
       </ToggleButton>
     </ToggleButtonGroup>
   )
