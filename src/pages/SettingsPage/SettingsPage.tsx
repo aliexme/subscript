@@ -4,7 +4,9 @@ import { useIntl } from 'react-intl'
 import { IntlTranslation } from 'app/intl'
 import { PageAppBar } from 'layout'
 import { Card, CardContent } from 'shared/UIKit/Card'
+import { Divider } from 'shared/UIKit/Divider'
 
+import { LanguageSettings } from './LanguageSettings'
 import { ThemeSettings } from './ThemeSettings'
 
 export const SettingsPage = () => {
@@ -16,6 +18,8 @@ export const SettingsPage = () => {
       <main>
         <Card>
           <CardContent>
+            <LanguageSettings />
+            <Divider spacing={3} />
             <ThemeSettings />
           </CardContent>
         </Card>

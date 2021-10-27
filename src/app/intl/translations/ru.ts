@@ -7,4 +7,5 @@ export const ru: IntlTranslations = {
   [IntlTranslation.SubscriptionsPageTitle]: 'Подписки',
   [IntlTranslation.SettingsPageTitle]: 'Настройки',
   [IntlTranslation.ThemeSettingsTitle]: 'Тема',
+  [IntlTranslation.LanguageSettingsTitle]: 'Язык',
 }

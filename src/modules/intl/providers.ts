@@ -34,7 +34,7 @@ export const commonProviders: Provider[] = [
     ],
   }),
   provide({
-    provide: commandLineListTokens.resolveUserDeps,
+    provide: commandLineListTokens.customerStart,
     multi: true,
     useFactory: ({ store, defaultIntlLocale }) => {
       return () => {

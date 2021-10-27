@@ -7,4 +7,5 @@ export const en: IntlTranslations = {
   [IntlTranslation.SubscriptionsPageTitle]: 'Subscriptions',
   [IntlTranslation.SettingsPageTitle]: 'Settings',
   [IntlTranslation.ThemeSettingsTitle]: 'Theme',
+  [IntlTranslation.LanguageSettingsTitle]: 'Language',
 }

@@ -4,6 +4,7 @@ export enum IntlTranslation {
   SubscriptionsPageTitle = 'SubscriptionsPageTitle',
   SettingsPageTitle = 'SettingsPageTitle',
   ThemeSettingsTitle = 'ThemeSettingsTitle',
+  LanguageSettingsTitle = 'LanguageSettingsTitle',
 }
 
 export type IntlTranslations = Record<IntlTranslation, string>
