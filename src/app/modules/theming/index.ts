@@ -4,7 +4,7 @@ import { COOKIE_MANAGER_TOKEN, STORE_TOKEN } from '@tramvai/module-common'
 import { activeThemeNameReducer, DEFAULT_THEME_NAME_TOKEN, THEMES_TOKEN, ThemingModule } from 'modules/theming'
 
 import { darkTheme, lightTheme, LIGHT_THEME_NAME } from '../../themes'
-import { CookieKey } from '../../cookie'
+import { CookieKey, COOKIE_DEFAULT_EXPIRES } from '../../cookie'
 
 @Module({
   imports: [ThemingModule],
@@ -35,7 +35,7 @@ import { CookieKey } from '../../cookie'
       useFactory: ({ store, cookie }) => {
         return () => {
           store.subscribe(activeThemeNameReducer, (newActiveThemeName) => {
-            cookie.set({ name: CookieKey.THEME, value: newActiveThemeName })
+            cookie.set({ name: CookieKey.THEME, value: newActiveThemeName, expires: COOKIE_DEFAULT_EXPIRES })
           })
         }
       },
