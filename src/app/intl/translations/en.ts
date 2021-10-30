@@ -10,4 +10,6 @@ export const en: IntlTranslations = {
   [IntlTranslation.LanguageSettingsTitle]: 'Language',
   [IntlTranslation.LightThemeName]: 'Light',
   [IntlTranslation.DarkThemeName]: 'Dark',
+  [IntlTranslation.DataGridNoRowsLabel]: 'No data',
+  [IntlTranslation.SubscriptionsDataGridNameColumnLabel]: 'Name',
 }

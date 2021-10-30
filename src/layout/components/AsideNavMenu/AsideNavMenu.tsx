@@ -3,7 +3,7 @@ import { useStore } from '@tramvai/state'
 
 import { useScreenMatches } from 'shared/screens'
 
-import { asideNavMenuOpenReducer } from '../../stores'
+import { asideNavMenuOpenStore } from '../../stores'
 import { ASIDE_NAV_MENU_TEMPORARY_DOWN_BREAKPOINT } from '../../breakpoints'
 import { AsideNavMenuContent } from './AsideNavMenuContent'
 import { StyledDrawer } from './styled'
@@ -17,7 +17,7 @@ export type AsideNavMenuProps = {
 export const AsideNavMenu: React.FC<AsideNavMenuProps> = (props) => {
   const { className } = props
 
-  const asideNavMenuOpen = useStore(asideNavMenuOpenReducer)
+  const asideNavMenuOpen = useStore(asideNavMenuOpenStore)
   const isTemporaryAsideNavMenu = useScreenMatches({ down: ASIDE_NAV_MENU_TEMPORARY_DOWN_BREAKPOINT })
 
   return (

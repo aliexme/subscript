@@ -9,5 +9,5 @@ export type SettingsTitleProps = TypographyProps
 export const SettingsTitle: React.FC<SettingsTitleProps> = (props) => {
   const { gutterBottom = true, ...typographyProps } = props
 
-  return <StyledTitle variant="h6" component="h2" gutterBottom={gutterBottom} {...typographyProps} />
+  return <StyledTitle variant="subtitle1" component="h2" gutterBottom={gutterBottom} {...typographyProps} />
 }

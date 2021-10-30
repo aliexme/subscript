@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import { useActions, useStore } from '@tramvai/state'
 
-import { activeThemeNameReducer, setActiveThemeNameAction } from 'modules/theming'
+import { activeThemeNameStore, setActiveThemeNameAction } from 'modules/theming'
 import { ThemeToggleButtonGroup } from 'entities/theming'
 import type { ThemeToggleButtonGroupProps } from 'entities/theming'
 
@@ -10,7 +10,7 @@ export type SelectActiveThemeButtonGroupProps = ThemeToggleButtonGroupProps
 export const SelectActiveThemeButtonGroup: React.FC<SelectActiveThemeButtonGroupProps> = (props) => {
   const { ...themeToggleButtonGroupProps } = props
 
-  const activeThemeName = useStore(activeThemeNameReducer)
+  const activeThemeName = useStore(activeThemeNameStore)
   const setActiveThemeName = useActions(setActiveThemeNameAction)
 
   const onThemeChange = useCallback(

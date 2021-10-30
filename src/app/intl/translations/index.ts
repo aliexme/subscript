@@ -7,6 +7,8 @@ export enum IntlTranslation {
   LanguageSettingsTitle = 'LanguageSettingsTitle',
   LightThemeName = 'LightThemeName',
   DarkThemeName = 'DarkThemeName',
+  DataGridNoRowsLabel = 'DataGridNoRowsLabel',
+  SubscriptionsDataGridNameColumnLabel = 'SubscriptionsDataGridNameColumnLabel',
 }
 
 export type IntlTranslations = Record<IntlTranslation, string>

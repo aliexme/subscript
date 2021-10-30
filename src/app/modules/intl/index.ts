@@ -2,7 +2,7 @@ import { commandLineListTokens, Module, provide } from '@tramvai/core'
 import { COOKIE_MANAGER_TOKEN, STORE_TOKEN } from '@tramvai/module-common'
 
 import { CookieKey, COOKIE_DEFAULT_EXPIRES } from 'app/cookie'
-import { activeIntlLocaleReducer, DEFAULT_INTL_LOCALE_TOKEN, IntlModule, INTL_MESSAGES_TOKEN } from 'modules/intl'
+import { activeIntlLocaleStore, DEFAULT_INTL_LOCALE_TOKEN, IntlModule, INTL_MESSAGES_TOKEN } from 'modules/intl'
 
 import { IntlLocale, intlMessages } from '../../intl'
 
@@ -29,7 +29,7 @@ import { IntlLocale, intlMessages } from '../../intl'
       multi: true,
       useFactory: ({ store, cookie }) => {
         return () => {
-          store.subscribe(activeIntlLocaleReducer, (newActiveIntlLocale) => {
+          store.subscribe(activeIntlLocaleStore, (newActiveIntlLocale) => {
             cookie.set({ name: CookieKey.LOCALE, value: newActiveIntlLocale, expires: COOKIE_DEFAULT_EXPIRES })
           })
         }

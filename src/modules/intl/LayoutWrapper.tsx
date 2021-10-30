@@ -8,13 +8,13 @@ import { deepMerge } from 'shared/utils/objects'
 
 import type { IntlMessages } from './types'
 import { INTL_MESSAGES_TOKEN } from './tokens'
-import { activeIntlLocaleReducer } from './stores'
+import { activeIntlLocaleStore } from './stores'
 
 export const LayoutWrapper: React.FC = (props) => {
   const { children } = props
 
   const intlMessages = useDi(INTL_MESSAGES_TOKEN) as IntlMessages[]
-  const activeLocale = useStore(activeIntlLocaleReducer)
+  const activeLocale = useStore(activeIntlLocaleStore)
 
   const combinedIntlMessages = useMemo(() => {
     return intlMessages.reduce((combined, intlMessagesMap) => {
