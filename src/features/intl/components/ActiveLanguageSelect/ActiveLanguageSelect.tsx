@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import { useActions, useStore } from '@tramvai/state'
 
-import { activeIntlLocaleReducer, setActiveIntlLocaleAction } from 'modules/intl'
+import { activeIntlLocaleStore, setActiveIntlLocaleAction } from 'modules/intl'
 import { LanguageSelect } from 'entities/intl'
 import type { LanguageSelectProps } from 'entities/intl'
 
@@ -10,7 +10,7 @@ export type ActiveLanguageSelectProps = LanguageSelectProps
 export const ActiveLanguageSelect: React.FC<ActiveLanguageSelectProps> = (props) => {
   const { ...languageSelectProps } = props
 
-  const activeIntlLocale = useStore(activeIntlLocaleReducer)
+  const activeIntlLocale = useStore(activeIntlLocaleStore)
   const setActiveIntlLocale = useActions(setActiveIntlLocaleAction)
 
   const onLanguageChange = useCallback(

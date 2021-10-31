@@ -1,7 +1,7 @@
 import { commandLineListTokens, Module, provide } from '@tramvai/core'
 import { COOKIE_MANAGER_TOKEN, STORE_TOKEN } from '@tramvai/module-common'
 
-import { activeThemeNameReducer, DEFAULT_THEME_NAME_TOKEN, THEMES_TOKEN, ThemingModule } from 'modules/theming'
+import { activeThemeNameStore, DEFAULT_THEME_NAME_TOKEN, THEMES_TOKEN, ThemingModule } from 'modules/theming'
 
 import { darkTheme, lightTheme, LIGHT_THEME_NAME } from '../../themes'
 import { CookieKey, COOKIE_DEFAULT_EXPIRES } from '../../cookie'
@@ -34,7 +34,7 @@ import { CookieKey, COOKIE_DEFAULT_EXPIRES } from '../../cookie'
       multi: true,
       useFactory: ({ store, cookie }) => {
         return () => {
-          store.subscribe(activeThemeNameReducer, (newActiveThemeName) => {
+          store.subscribe(activeThemeNameStore, (newActiveThemeName) => {
             cookie.set({ name: CookieKey.THEME, value: newActiveThemeName, expires: COOKIE_DEFAULT_EXPIRES })
           })
         }

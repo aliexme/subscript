@@ -6,7 +6,7 @@ import type { Provider } from '@tinkoff/dippy'
 
 import type { Theme } from './theme'
 import { DEFAULT_THEME_NAME_TOKEN, ROOT_THEME_ATTRIBUTE_TOKEN, THEMES_TOKEN } from './tokens'
-import { activeThemeNameReducer } from './stores'
+import { activeThemeNameStore } from './stores'
 import { setActiveThemeNameAction } from './actions'
 import { defaultTheme, DEFAULT_THEME_NAME } from './themes'
 import { buildRootThemesInlineStyles } from './styles'
@@ -28,13 +28,13 @@ export const commonProviders: Provider[] = [
   provide({
     provide: COMBINE_REDUCERS,
     multi: true,
-    useValue: activeThemeNameReducer,
+    useValue: activeThemeNameStore,
   }),
   provide({
     provide: HTML_ATTRS,
     multi: true,
     useFactory: ({ store, rootThemeAttribute }): HtmlAttrs => {
-      const activeThemeName = store.getState(activeThemeNameReducer)
+      const activeThemeName = store.getState(activeThemeNameStore)
 
       return {
         target: 'html',
