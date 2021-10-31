@@ -12,4 +12,6 @@ export const ru: IntlTranslations = {
   [IntlTranslation.DarkThemeName]: 'Темная',
   [IntlTranslation.DataGridNoRowsLabel]: 'Ничего не найдено',
   [IntlTranslation.SubscriptionsDataGridNameColumnLabel]: 'Название',
+  [IntlTranslation.AddSubscriptionButtonLabel]: 'Добавить',
+  [IntlTranslation.AccountSubscriptionsCardTitle]: 'Подписки',
 }

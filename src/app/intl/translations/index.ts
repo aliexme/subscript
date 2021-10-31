@@ -9,6 +9,8 @@ export enum IntlTranslation {
   DarkThemeName = 'DarkThemeName',
   DataGridNoRowsLabel = 'DataGridNoRowsLabel',
   SubscriptionsDataGridNameColumnLabel = 'SubscriptionsDataGridNameColumnLabel',
+  AddSubscriptionButtonLabel = 'AddSubscriptionButtonLabel',
+  AccountSubscriptionsCardTitle = 'AccountSubscriptionsCardTitle',
 }
 
 export type IntlTranslations = Record<IntlTranslation, string>

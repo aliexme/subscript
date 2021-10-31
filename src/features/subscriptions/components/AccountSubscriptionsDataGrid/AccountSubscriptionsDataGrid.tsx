@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useAccountSubscriptions } from 'entities/account/hooks'
+import { useAccountSubscriptions } from 'entities/account'
 import { SubscriptionsDataGrid } from 'entities/subscription'
 import type { SubscriptionsDataGridProps } from 'entities/subscription'
 
