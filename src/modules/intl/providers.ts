@@ -5,7 +5,7 @@ import type { Provider } from '@tinkoff/dippy'
 
 import { DEFAULT_INTL_LOCALE_TOKEN, INTL_MESSAGES_TOKEN } from './tokens'
 import { activeIntlLocaleStore, setActiveIntlLocale } from './stores'
-import { layoutWrapper } from './LayoutWrapper'
+import { layoutWrapper } from './layout'
 
 export const commonProviders: Provider[] = [
   provide({

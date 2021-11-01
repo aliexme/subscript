@@ -1,0 +1,5 @@
+{
+  "name": "modals",
+  "main": "./server.ts",
+  "browser": "./client.ts"
+}

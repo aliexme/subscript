@@ -6,9 +6,9 @@ import { IntlProvider } from 'react-intl'
 import type { ObjectType } from 'shared/utils/objects'
 import { deepMerge } from 'shared/utils/objects'
 
-import type { IntlMessages } from './types'
-import { INTL_MESSAGES_TOKEN } from './tokens'
-import { activeIntlLocaleStore } from './stores'
+import type { IntlMessages } from '../../types'
+import { INTL_MESSAGES_TOKEN } from '../../tokens'
+import { activeIntlLocaleStore } from '../../stores'
 
 export const LayoutWrapper: React.FC = (props) => {
   const { children } = props
