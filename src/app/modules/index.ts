@@ -8,6 +8,7 @@ import { LocalStorageModule } from 'modules/localStorage'
 
 import { AppRenderingModule } from './rendering'
 import { AppRoutingModule } from './routing'
+import { AppModalsModule } from './modals'
 import { AppThemingModule } from './theming'
 import { AppIntlModule } from './intl'
 import { AppSeoModule } from './seo'
@@ -19,6 +20,7 @@ export const appModules: (ModuleType | ExtendedModule)[] = [
   LocalStorageModule,
   AppRenderingModule,
   AppRoutingModule,
+  AppModalsModule,
   AppThemingModule,
   AppIntlModule,
   AppSeoModule,
