@@ -10,7 +10,7 @@ import { darkTheme, lightTheme } from 'shared/lib/theming'
 import { ToggleButton, ToggleButtonGroup } from 'shared/UIKit/Button'
 import type { ToggleButtonGroupProps } from 'shared/UIKit/Button'
 
-export type SelectActiveThemeButtonGroupProps = Omit<ToggleButtonGroupProps, 'value' | 'onChange'>
+export type SelectActiveThemeButtonGroupProps = ToggleButtonGroupProps
 
 export const SelectActiveThemeButtonGroup: React.FC<SelectActiveThemeButtonGroupProps> = (props) => {
   const { ...toggleButtonGroupProps } = props
@@ -31,11 +31,11 @@ export const SelectActiveThemeButtonGroup: React.FC<SelectActiveThemeButtonGroup
 
   return (
     <ToggleButtonGroup
-      value={activeThemeName}
       color="primary"
+      {...toggleButtonGroupProps}
+      value={activeThemeName}
       exclusive
       onChange={onThemeChange}
-      {...toggleButtonGroupProps}
     >
       <ToggleButton value={lightTheme.name}>
         <LightModeIcon fontSize="small" />
