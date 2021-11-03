@@ -5,7 +5,7 @@ import { CloseAsideNavMenuButton } from 'features/asideNavMenu'
 import { useScreenMatches } from 'shared/lib/screens'
 import { Typography } from 'shared/UIKit/Typography'
 
-import { ASIDE_NAV_MENU_TEMPORARY_DOWN_BREAKPOINT } from '../../../breakpoints'
+import { ASIDE_NAV_MENU_TEMPORARY_DOWN_BREAKPOINT } from '../../../../shared/layout/breakpoints'
 
 import styles from './AsideNavMenuHeader.css'
 

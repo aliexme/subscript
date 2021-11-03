@@ -2,9 +2,9 @@ import React from 'react'
 import { useActions } from '@tramvai/state'
 import CloseIcon from '@mui/icons-material/Close'
 
-import { closeAsideNavMenuAction } from 'layout'
 import { IconButton } from 'shared/UIKit/Button'
 import type { IconButtonProps } from 'shared/UIKit/Button'
+import { closeAsideNavMenuAction } from 'shared/layout'
 
 export type CloseAsideNavMenuButtonProps = IconButtonProps
 

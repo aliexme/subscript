@@ -8,3 +8,5 @@ export const asideNavMenuOpenStore = createReducer<boolean>('asideNavMenuOpen', 
   .on(setAsideNavMenuOpen, (_state, open) => open)
   .on(openAsideNavMenu, () => true)
   .on(closeAsideNavMenu, () => false)
+
+export const layoutStores = [asideNavMenuOpenStore]

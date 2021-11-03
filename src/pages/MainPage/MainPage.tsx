@@ -1,7 +1,7 @@
 import React from 'react'
 import { useIntl } from 'react-intl'
 
-import { PageAppBar } from 'layout'
+import { PageAppBar } from 'widgets/layout'
 import { IntlTranslation } from 'shared/lib/i18n'
 
 import { AccountSubscriptionsCard } from './AccountSubscriptionsCard'

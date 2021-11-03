@@ -3,8 +3,8 @@ import { useStore } from '@tramvai/state'
 
 import { useScreenMatches } from 'shared/lib/screens'
 
-import { asideNavMenuOpenStore } from '../../stores'
-import { ASIDE_NAV_MENU_TEMPORARY_DOWN_BREAKPOINT } from '../../breakpoints'
+import { asideNavMenuOpenStore } from '../../../shared/layout/stores'
+import { ASIDE_NAV_MENU_TEMPORARY_DOWN_BREAKPOINT } from '../../../shared/layout/breakpoints'
 import { AsideNavMenuContent } from './AsideNavMenuContent'
 import { StyledDrawer } from './styled'
 

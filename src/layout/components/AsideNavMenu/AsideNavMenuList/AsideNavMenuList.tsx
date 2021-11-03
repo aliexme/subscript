@@ -9,7 +9,7 @@ import { IntlTranslation } from 'shared/lib/i18n'
 import { Pages, PagesPath, RouteLink } from 'shared/lib/routing'
 import { List, ListItemButton, ListItemIcon, ListItemText } from 'shared/UIKit/List'
 
-import { closeAsideNavMenuAction } from '../../../actions'
+import { closeAsideNavMenuAction } from '../../../../shared/layout/actions'
 
 type Props = {
   className?: string

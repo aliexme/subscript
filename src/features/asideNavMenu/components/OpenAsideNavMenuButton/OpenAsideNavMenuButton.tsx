@@ -2,9 +2,9 @@ import React from 'react'
 import { useActions } from '@tramvai/state'
 import MenuIcon from '@mui/icons-material/Menu'
 
-import { openAsideNavMenuAction } from 'layout'
 import { IconButton } from 'shared/UIKit/Button'
 import type { IconButtonProps } from 'shared/UIKit/Button'
+import { openAsideNavMenuAction } from 'shared/layout'
 
 export type OpenAsideNavMenuButtonProps = IconButtonProps
 

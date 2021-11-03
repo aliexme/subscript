@@ -21,12 +21,13 @@
             "alias": {
               "app": "./src/app",
               "bundles": "./src/bundles",
-              "modules": "./src/modules",
               "layout": "./src/layout",
               "pages": "./src/pages",
-              "entities": "./src/entities",
+              "widgets": "./src/widgets",
               "features": "./src/features",
-              "shared": "./src/shared"
+              "entities": "./src/entities",
+              "shared": "./src/shared",
+              "modules": "./src/modules"
             }
           }
         },
