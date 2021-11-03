@@ -5,10 +5,9 @@ import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet'
 import SettingsIcon from '@mui/icons-material/Settings'
 import { useIntl } from 'react-intl'
 
-import { Pages, PagesPath } from 'pages'
-import { List, ListItemButton, ListItemIcon, ListItemText } from 'shared/UIKit/List'
 import { IntlTranslation } from 'shared/lib/i18n'
-import { RouteLink } from 'shared/lib/routing'
+import { Pages, PagesPath, RouteLink } from 'shared/lib/routing'
+import { List, ListItemButton, ListItemIcon, ListItemText } from 'shared/UIKit/List'
 
 import { closeAsideNavMenuAction } from '../../../actions'
 

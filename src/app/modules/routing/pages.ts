@@ -2,8 +2,7 @@ import { provide } from '@tramvai/core'
 import { ROUTES_TOKEN } from '@tramvai/module-router'
 import type { Provider } from '@tinkoff/dippy'
 
-import { Bundles } from 'bundles'
-import { Pages, PagesPath } from 'pages'
+import { Bundles, Pages, PagesPath } from 'shared/lib/routing'
 
 export const pageProviders: Provider[] = [
   provide({

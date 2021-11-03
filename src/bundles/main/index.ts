@@ -1,8 +1,7 @@
 import { createBundle } from '@tramvai/core'
 import { lazy } from '@tramvai/react'
 
-import { Bundles } from 'bundles'
-import { Pages } from 'pages'
+import { Bundles, Pages } from 'shared/lib/routing'
 
 export default createBundle({
   name: Bundles.MAIN,
