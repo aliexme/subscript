@@ -1,10 +1,10 @@
 import React from 'react'
 
+import { useScreenMatches } from 'shared/lib/screens'
 import { AppBar } from 'shared/UIKit/AppBar'
 import type { AppBarProps } from 'shared/UIKit/AppBar'
 import { Toolbar } from 'shared/UIKit/Toolbar'
 import { Typography } from 'shared/UIKit/Typography'
-import { useScreenMatches } from 'shared/screens'
 import type { Overwrite } from 'shared/utils/ts'
 
 import { ASIDE_NAV_MENU_TEMPORARY_DOWN_BREAKPOINT } from '../../breakpoints'

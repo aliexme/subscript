@@ -2,7 +2,7 @@ import React from 'react'
 import MuiDialog from '@mui/material/Dialog'
 import type { DialogProps as MuiDialogProps } from '@mui/material/Dialog'
 
-import { MOBILE_SCREEN_DOWN_BREAKPOINT, useScreenMatches } from 'shared/screens'
+import { MOBILE_SCREEN_DOWN_BREAKPOINT, useScreenMatches } from 'shared/lib/screens'
 
 export type DialogProps = MuiDialogProps
 

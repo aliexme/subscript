@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles'
 
-import { TABLET_SCREEN_UP_BREAKPOINT } from 'shared/screens'
+import { TABLET_SCREEN_UP_BREAKPOINT } from 'shared/lib/screens'
 
 import { AccountSubscriptionsCardHeader } from './AccountSubscriptionsCardHeader'
 

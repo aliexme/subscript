@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStore } from '@tramvai/state'
 
-import { useScreenMatches } from 'shared/screens'
+import { useScreenMatches } from 'shared/lib/screens'
 
 import { asideNavMenuOpenStore } from '../../stores'
 import { ASIDE_NAV_MENU_TEMPORARY_DOWN_BREAKPOINT } from '../../breakpoints'

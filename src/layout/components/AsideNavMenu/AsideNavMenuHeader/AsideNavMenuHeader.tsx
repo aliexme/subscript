@@ -2,8 +2,8 @@ import React from 'react'
 import classNames from 'classnames'
 
 import { CloseAsideNavMenuButton } from 'features/asideNavMenu'
+import { useScreenMatches } from 'shared/lib/screens'
 import { Typography } from 'shared/UIKit/Typography'
-import { useScreenMatches } from 'shared/screens'
 
 import { ASIDE_NAV_MENU_TEMPORARY_DOWN_BREAKPOINT } from '../../../breakpoints'
 

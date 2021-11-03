@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles'
 
-import { DESKTOP_SCREEN_UP_BREAKPOINT, TABLET_SCREEN_UP_BREAKPOINT } from 'shared/screens'
+import { DESKTOP_SCREEN_UP_BREAKPOINT, TABLET_SCREEN_UP_BREAKPOINT } from 'shared/lib/screens'
 
 export const StyledRoot = styled('div')(({ theme }) => ({
   display: 'flex',

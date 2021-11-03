@@ -1,7 +1,7 @@
 import { styled } from '@mui/material/styles'
 
 import { OpenAsideNavMenuButton } from 'features/asideNavMenu'
-import { TABLET_SCREEN_UP_BREAKPOINT } from 'shared/screens'
+import { TABLET_SCREEN_UP_BREAKPOINT } from 'shared/lib/screens'
 
 export const StyledOpenAsideNavMenuButton = styled(OpenAsideNavMenuButton)(({ theme }) => ({
   flexShrink: 0,
