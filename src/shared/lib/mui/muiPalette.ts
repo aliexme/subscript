@@ -1,9 +1,8 @@
 import createPalette from '@mui/material/styles/createPalette'
 
 import type { Theme } from 'modules/theming'
+import { DARK_THEME_NAME } from 'shared/lib/theming'
 import { filterUndefinedObjectValues } from 'shared/utils/objects'
-
-import { DARK_THEME_NAME } from '../../../app/themes'
 
 export const createMuiPalette = (theme: Theme) => {
   const isDarkMode = [DARK_THEME_NAME].includes(theme.name)
