@@ -1,7 +1,7 @@
 import { styled } from '@mui/material/styles'
 
-import { ActiveLanguageSelect } from 'features/intl'
-import type { ActiveLanguageSelectProps } from 'features/intl'
+import { ActiveLanguageSelect } from 'features/i18n'
+import type { ActiveLanguageSelectProps } from 'features/i18n'
 import { TABLET_SCREEN_UP_BREAKPOINT } from 'shared/screens'
 
 export const StyledActiveLanguageSelect = styled(ActiveLanguageSelect)<ActiveLanguageSelectProps>(({ theme }) => ({

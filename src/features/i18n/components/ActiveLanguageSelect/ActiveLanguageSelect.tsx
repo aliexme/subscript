@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import { useActions, useStore } from '@tramvai/state'
 
-import { activeIntlLocaleStore, setActiveIntlLocaleAction } from 'modules/intl'
+import { activeIntlLocaleStore, setActiveIntlLocaleAction } from 'modules/i18n'
 import { IntlLocale } from 'shared/lib/i18n'
 import { TextField } from 'shared/UIKit/TextField'
 import type { TextFieldProps } from 'shared/UIKit/TextField'
