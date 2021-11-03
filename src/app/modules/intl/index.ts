@@ -1,9 +1,9 @@
 import { commandLineListTokens, Module, provide } from '@tramvai/core'
 import { COOKIE_MANAGER_TOKEN, STORE_TOKEN } from '@tramvai/module-common'
 
-import { CookieKey, COOKIE_DEFAULT_EXPIRES } from 'app/cookie'
 import { activeIntlLocaleStore, DEFAULT_INTL_LOCALE_TOKEN, IntlModule, INTL_MESSAGES_TOKEN } from 'modules/intl'
 import { IntlLocale, intlMessages } from 'shared/lib/i18n'
+import { CookieKey, COOKIE_DEFAULT_EXPIRES } from 'shared/lib/cookie'
 
 @Module({
   imports: [IntlModule],

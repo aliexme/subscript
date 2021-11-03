@@ -2,9 +2,9 @@ import { commandLineListTokens, Module, provide } from '@tramvai/core'
 import { COOKIE_MANAGER_TOKEN, STORE_TOKEN } from '@tramvai/module-common'
 
 import { activeThemeNameStore, DEFAULT_THEME_NAME_TOKEN, THEMES_TOKEN, ThemingModule } from 'modules/theming'
+import { CookieKey, COOKIE_DEFAULT_EXPIRES } from 'shared/lib/cookie'
 
 import { darkTheme, lightTheme, LIGHT_THEME_NAME } from '../../themes'
-import { CookieKey, COOKIE_DEFAULT_EXPIRES } from '../../cookie'
 
 @Module({
   imports: [ThemingModule],
