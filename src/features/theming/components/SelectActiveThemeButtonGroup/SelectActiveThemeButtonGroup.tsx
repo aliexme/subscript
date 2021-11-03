@@ -1,14 +1,19 @@
 import React, { useCallback } from 'react'
 import { useActions, useStore } from '@tramvai/state'
+import LightModeIcon from '@mui/icons-material/LightMode'
+import DarkModeIcon from '@mui/icons-material/DarkMode'
+import { FormattedMessage } from 'react-intl'
 
 import { activeThemeNameStore, setActiveThemeNameAction } from 'modules/theming'
-import { ThemeToggleButtonGroup } from 'entities/theming'
-import type { ThemeToggleButtonGroupProps } from 'entities/theming'
+import { IntlTranslation } from 'shared/lib/i18n'
+import { darkTheme, lightTheme } from 'shared/lib/theming'
+import { ToggleButton, ToggleButtonGroup } from 'shared/UIKit/Button'
+import type { ToggleButtonGroupProps } from 'shared/UIKit/Button'
 
-export type SelectActiveThemeButtonGroupProps = ThemeToggleButtonGroupProps
+export type SelectActiveThemeButtonGroupProps = Omit<ToggleButtonGroupProps, 'value' | 'onChange'>
 
 export const SelectActiveThemeButtonGroup: React.FC<SelectActiveThemeButtonGroupProps> = (props) => {
-  const { ...themeToggleButtonGroupProps } = props
+  const { ...toggleButtonGroupProps } = props
 
   const activeThemeName = useStore(activeThemeNameStore)
   const setActiveThemeName = useActions(setActiveThemeNameAction)
@@ -25,11 +30,21 @@ export const SelectActiveThemeButtonGroup: React.FC<SelectActiveThemeButtonGroup
   )
 
   return (
-    <ThemeToggleButtonGroup
-      {...themeToggleButtonGroupProps}
+    <ToggleButtonGroup
       value={activeThemeName}
+      color="primary"
       exclusive
       onChange={onThemeChange}
-    />
+      {...toggleButtonGroupProps}
+    >
+      <ToggleButton value={lightTheme.name}>
+        <LightModeIcon fontSize="small" />
+        <FormattedMessage id={IntlTranslation.LightThemeName} />
+      </ToggleButton>
+      <ToggleButton value={darkTheme.name}>
+        <DarkModeIcon fontSize="small" />
+        <FormattedMessage id={IntlTranslation.DarkThemeName} />
+      </ToggleButton>
+    </ToggleButtonGroup>
   )
 }
