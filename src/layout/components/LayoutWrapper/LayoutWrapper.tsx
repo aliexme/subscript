@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { MuiThemeProvider } from 'app/mui'
+import { MuiThemeProvider } from 'shared/lib/mui'
 import type { ObjectType } from 'shared/utils/objects'
 
 export const LayoutWrapper: React.FC = (props) => {

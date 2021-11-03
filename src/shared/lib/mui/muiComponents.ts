@@ -3,12 +3,12 @@ import type { Components } from '@mui/material/styles'
 import type { Shape } from '@mui/system/createTheme/shape'
 import type { Spacing } from '@mui/system/createTheme/createSpacing'
 
-import { createMuiPaperComponent } from './components/MuiPaper'
-import { createMuiButtonComponent } from './components/MuiButton'
-import { createMuiListItemButtonComponent } from './components/MuiListItemButton'
-import { createMuiToggleButtonGroupComponent } from './components/MuiToggleButtonGroup'
-import { createMuiDialogComponent } from './components/MuiDialog'
-import { createMuiUseMediaQueryComponent } from './components/MuiUseMediaQuery'
+import { createMuiPaperComponent } from './muiComponents/MuiPaper'
+import { createMuiButtonComponent } from './muiComponents/MuiButton'
+import { createMuiListItemButtonComponent } from './muiComponents/MuiListItemButton'
+import { createMuiToggleButtonGroupComponent } from './muiComponents/MuiToggleButtonGroup'
+import { createMuiDialogComponent } from './muiComponents/MuiDialog'
+import { createMuiUseMediaQueryComponent } from './muiComponents/MuiUseMediaQuery'
 
 export const createMuiComponents = (shape: Shape, spacing: Spacing, media: Media): Components => {
   const MuiPaperComponent = createMuiPaperComponent()

@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import type { Breakpoint } from '@mui/material/styles'
 
-import { useMuiTheme } from 'shared/mui'
+import { useMuiTheme } from 'shared/lib/mui'
 
 export const useScreenMatches = (params: {
   up?: Breakpoint | number

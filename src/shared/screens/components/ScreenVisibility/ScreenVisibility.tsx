@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import type { Breakpoint } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
-import { useMuiTheme } from 'shared/mui'
+import { useMuiTheme } from 'shared/lib/mui'
 
 export type ScreenVisibilityProps = {
   up?: Breakpoint | number
