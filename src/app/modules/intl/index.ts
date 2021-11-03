@@ -3,8 +3,7 @@ import { COOKIE_MANAGER_TOKEN, STORE_TOKEN } from '@tramvai/module-common'
 
 import { CookieKey, COOKIE_DEFAULT_EXPIRES } from 'app/cookie'
 import { activeIntlLocaleStore, DEFAULT_INTL_LOCALE_TOKEN, IntlModule, INTL_MESSAGES_TOKEN } from 'modules/intl'
-
-import { IntlLocale, intlMessages } from '../../intl'
+import { IntlLocale, intlMessages } from 'shared/lib/i18n'
 
 @Module({
   imports: [IntlModule],

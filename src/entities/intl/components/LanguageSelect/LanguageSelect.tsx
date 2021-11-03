@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { IntlLocale } from 'app/intl'
+import { IntlLocale } from 'shared/lib/i18n'
 import { TextField } from 'shared/UIKit/TextField'
 import type { TextFieldProps } from 'shared/UIKit/TextField'
 import { MenuItem } from 'shared/UIKit/Menu'

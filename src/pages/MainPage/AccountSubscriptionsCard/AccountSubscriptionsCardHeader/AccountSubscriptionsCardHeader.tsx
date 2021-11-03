@@ -2,8 +2,8 @@ import React from 'react'
 import classNames from 'classnames'
 import { FormattedMessage } from 'react-intl'
 
-import { IntlTranslation } from 'app/intl'
 import { AddSubscriptionButton } from 'features/subscriptions'
+import { IntlTranslation } from 'shared/lib/i18n'
 import { Typography } from 'shared/UIKit/Typography'
 
 import { StyledActionsRoot } from './styled'

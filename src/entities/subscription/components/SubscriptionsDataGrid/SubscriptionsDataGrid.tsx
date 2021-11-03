@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import type { GridColumns } from '@mui/x-data-grid'
 import { useIntl } from 'react-intl'
 
-import { IntlTranslation } from 'app/intl'
+import { IntlTranslation } from 'shared/lib/i18n'
 import { DataGrid } from 'shared/UIKit/DataGrid'
 import type { DataGridProps } from 'shared/UIKit/DataGrid'
 

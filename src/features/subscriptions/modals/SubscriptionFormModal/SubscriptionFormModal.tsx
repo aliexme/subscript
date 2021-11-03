@@ -1,9 +1,9 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import { IntlTranslation } from 'app/intl'
 import type { ModalComponentProps } from 'modules/modals'
 import type { Subscription } from 'entities/subscription'
+import { IntlTranslation } from 'shared/lib/i18n'
 import { Dialog, DialogActions, DialogContent, DialogTitle } from 'shared/UIKit/Dialog'
 import { Button } from 'shared/UIKit/Button'
 

@@ -3,8 +3,8 @@ import LightModeIcon from '@mui/icons-material/LightMode'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import { FormattedMessage } from 'react-intl'
 
-import { IntlTranslation } from 'app/intl'
 import { darkTheme, lightTheme } from 'app/themes'
+import { IntlTranslation } from 'shared/lib/i18n'
 import { ToggleButton, ToggleButtonGroup } from 'shared/UIKit/Button'
 import type { ToggleButtonGroupProps } from 'shared/UIKit/Button'
 

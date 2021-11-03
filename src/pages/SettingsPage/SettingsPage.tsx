@@ -1,8 +1,8 @@
 import React from 'react'
 import { useIntl } from 'react-intl'
 
-import { IntlTranslation } from 'app/intl'
 import { PageAppBar } from 'layout'
+import { IntlTranslation } from 'shared/lib/i18n'
 import { Card, CardContent } from 'shared/UIKit/Card'
 import { Divider } from 'shared/UIKit/Divider'
 

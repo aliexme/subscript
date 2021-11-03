@@ -1,7 +1,7 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import { IntlTranslation } from 'app/intl'
+import { IntlTranslation } from 'shared/lib/i18n'
 
 import { SettingsTitle } from '../SettingsTitle'
 import { StyledActiveLanguageSelect } from './styled'

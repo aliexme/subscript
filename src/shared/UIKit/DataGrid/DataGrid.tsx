@@ -3,7 +3,7 @@ import { DataGrid as MuiDataGrid } from '@mui/x-data-grid'
 import type { DataGridProps as MuiDataGridProps, GridLocaleText as MuiGridLocaleText } from '@mui/x-data-grid'
 import { useIntl } from 'react-intl'
 
-import { IntlTranslation } from 'app/intl'
+import { IntlTranslation } from 'shared/lib/i18n'
 
 export type DataGridProps = MuiDataGridProps
 

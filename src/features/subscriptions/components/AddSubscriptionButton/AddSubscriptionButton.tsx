@@ -3,8 +3,8 @@ import { useActions } from '@tramvai/state'
 import AddIcon from '@mui/icons-material/Add'
 import { FormattedMessage } from 'react-intl'
 
-import { IntlTranslation } from 'app/intl'
 import { openSubscriptionFormModalAction } from 'features/subscriptions'
+import { IntlTranslation } from 'shared/lib/i18n'
 import { Button } from 'shared/UIKit/Button'
 import type { ButtonProps } from 'shared/UIKit/Button'
 
