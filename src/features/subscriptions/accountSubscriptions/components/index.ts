@@ -1,2 +1,2 @@
 export * from './AccountSubscriptionsDataGrid'
-export * from './AddSubscriptionButton'
+export * from './SubscriptionFormModal'

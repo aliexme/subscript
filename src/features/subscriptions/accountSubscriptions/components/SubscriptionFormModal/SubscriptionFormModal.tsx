@@ -4,8 +4,9 @@ import { FormattedMessage } from 'react-intl'
 import type { ModalComponentProps } from 'modules/modals'
 import type { Subscription } from 'entities/subscription'
 import { IntlTranslation } from 'shared/lib/i18n'
-import { Dialog, DialogActions, DialogContent, DialogTitle } from 'shared/UIKit/Dialog'
-import { Button } from 'shared/UIKit/Button'
+import { Dialog, DialogTitle } from 'shared/UIKit/Dialog'
+
+import { SubscriptionForm } from './SubscriptionForm'
 
 export type SubscriptionFormModalProps = {
   subscription?: Subscription
@@ -21,12 +22,7 @@ export const SubscriptionFormModal = (props: Props) => {
       <DialogTitle onClose={onClose}>
         {subscription ? subscription.name : <FormattedMessage id={IntlTranslation.NewSubscriptionFormModalTitle} />}
       </DialogTitle>
-      <DialogContent>Subscription form modal</DialogContent>
-      <DialogActions>
-        <Button color="secondary" onClick={onClose}>
-          <FormattedMessage id={IntlTranslation.CancelAction} />
-        </Button>
-      </DialogActions>
+      <SubscriptionForm subscription={subscription} onCancel={onClose} />
     </Dialog>
   )
 }

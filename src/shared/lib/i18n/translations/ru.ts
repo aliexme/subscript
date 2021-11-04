@@ -2,7 +2,9 @@ import { IntlTranslation } from './index'
 import type { IntlTranslations } from './index'
 
 export const ru: IntlTranslations = {
+  [IntlTranslation.SaveAction]: 'Сохранить',
   [IntlTranslation.CancelAction]: 'Отмена',
+  [IntlTranslation.RequiredFormFieldMessage]: 'Поле обязательно для заполнения',
   [IntlTranslation.AsideNavMenuSubscriptionsItem]: 'Подписки',
   [IntlTranslation.AsideNavMenuSettingsItem]: 'Настройки',
   [IntlTranslation.SubscriptionsPageTitle]: 'Подписки',
@@ -12,7 +14,7 @@ export const ru: IntlTranslations = {
   [IntlTranslation.LightThemeName]: 'Светлая',
   [IntlTranslation.DarkThemeName]: 'Темная',
   [IntlTranslation.DataGridNoRowsLabel]: 'Ничего не найдено',
-  [IntlTranslation.SubscriptionsDataGridNameColumnLabel]: 'Название',
+  [IntlTranslation.SubscriptionNameLabel]: 'Название',
   [IntlTranslation.NewSubscriptionFormModalTitle]: 'Новая подписка',
   [IntlTranslation.AddSubscriptionButtonLabel]: 'Добавить',
   [IntlTranslation.AccountSubscriptionsCardTitle]: 'Подписки',

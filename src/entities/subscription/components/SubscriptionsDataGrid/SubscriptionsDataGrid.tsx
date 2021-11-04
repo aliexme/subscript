@@ -21,7 +21,7 @@ export const SubscriptionsDataGrid: React.FC<SubscriptionsDataGridProps> = (prop
     return [
       {
         field: 'name',
-        headerName: intl.formatMessage({ id: IntlTranslation.SubscriptionsDataGridNameColumnLabel }),
+        headerName: intl.formatMessage({ id: IntlTranslation.SubscriptionNameLabel }),
       },
     ]
   }, [intl])

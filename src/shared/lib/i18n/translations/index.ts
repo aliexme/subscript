@@ -1,5 +1,7 @@
 export enum IntlTranslation {
+  SaveAction = 'SaveAction',
   CancelAction = 'CancelAction',
+  RequiredFormFieldMessage = 'RequiredFormFieldMessage',
   AsideNavMenuSubscriptionsItem = 'AsideNavMenuSubscriptionsItem',
   AsideNavMenuSettingsItem = 'AsideNavMenuSettingsItem',
   SubscriptionsPageTitle = 'SubscriptionsPageTitle',
@@ -9,7 +11,7 @@ export enum IntlTranslation {
   LightThemeName = 'LightThemeName',
   DarkThemeName = 'DarkThemeName',
   DataGridNoRowsLabel = 'DataGridNoRowsLabel',
-  SubscriptionsDataGridNameColumnLabel = 'SubscriptionsDataGridNameColumnLabel',
+  SubscriptionNameLabel = 'SubscriptionNameLabel',
   NewSubscriptionFormModalTitle = 'NewSubscriptionFormModalTitle',
   AddSubscriptionButtonLabel = 'AddSubscriptionButtonLabel',
   AccountSubscriptionsCardTitle = 'AccountSubscriptionsCardTitle',

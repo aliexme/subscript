@@ -1,4 +1,4 @@
-import type { Components, ComponentsProps } from '@mui/material/styles'
+import type { Components, ComponentsOverrides, ComponentsProps } from '@mui/material/styles'
 
 const createMuiDialogDefaultProps = (): ComponentsProps['MuiDialog'] => {
   return {
@@ -8,7 +8,18 @@ const createMuiDialogDefaultProps = (): ComponentsProps['MuiDialog'] => {
   }
 }
 
+const createMuiDialogStyleOverrides = (): ComponentsOverrides['MuiDialog'] => {
+  return {
+    scrollBody: {
+      '& .MuiDialogContent-root': {
+        overflow: 'visible',
+      },
+    },
+  }
+}
+
 export const createMuiDialogComponent = (): Components['MuiDialog'] => {
   const defaultProps = createMuiDialogDefaultProps()
-  return { defaultProps }
+  const styleOverrides = createMuiDialogStyleOverrides()
+  return { defaultProps, styleOverrides }
 }

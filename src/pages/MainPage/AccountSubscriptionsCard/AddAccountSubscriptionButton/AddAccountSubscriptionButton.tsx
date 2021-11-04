@@ -8,9 +8,9 @@ import { IntlTranslation } from 'shared/lib/i18n'
 import { Button } from 'shared/UIKit/Button'
 import type { ButtonProps } from 'shared/UIKit/Button'
 
-export type AddSubscriptionButtonProps = ButtonProps
+export type AddAccountSubscriptionButtonProps = ButtonProps
 
-export const AddSubscriptionButton: React.FC<AddSubscriptionButtonProps> = (props) => {
+export const AddAccountSubscriptionButton: React.FC<AddAccountSubscriptionButtonProps> = (props) => {
   const { ...buttonProps } = props
 
   const openSubscriptionFormModal = useActions(openSubscriptionFormModalAction)
