@@ -21,10 +21,10 @@ export const SubscriptionNameFormField: React.FC<Props> = (props) => {
     <TextField
       {...field}
       label={intl.formatMessage({ id: IntlTranslation.SubscriptionNameLabel })}
+      placeholder={intl.formatMessage({ id: IntlTranslation.SubscriptionNameFormFieldPlaceholder })}
       size="small"
-      required
-      error={!!meta.error}
-      helperText={meta.error}
+      error={meta.touched && !!meta.error}
+      InputLabelProps={{ required: true }}
       className={className}
     />
   )

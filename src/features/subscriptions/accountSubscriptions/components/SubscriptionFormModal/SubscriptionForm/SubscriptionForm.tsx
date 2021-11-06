@@ -5,7 +5,7 @@ import * as Yup from 'yup'
 import type { SchemaOf } from 'yup'
 import { FormattedMessage, useIntl } from 'react-intl'
 
-import { Subscription } from 'entities/subscription'
+import { Subscription, SubscriptionBillingPeriodType } from 'entities/subscription'
 import { IntlTranslation } from 'shared/lib/i18n'
 import { DialogActions, DialogContent } from 'shared/UIKit/Dialog'
 import { Stack } from 'shared/UIKit/Stack'
@@ -17,6 +17,7 @@ import { SubscriptionFormField } from './form'
 import type { SubscriptionFormValues } from './form'
 import { SubscriptionNameFormField } from './SubscriptionNameFormField'
 import { SubscriptionDescriptionFormField } from './SubscriptionDescriptionFormField'
+import { SubscriptionBillingPeriodFormField } from './SubscriptionBillingPeriodFormField'
 
 import styles from './SubscriptionForm.css'
 
@@ -39,6 +40,9 @@ export const SubscriptionForm: React.FC<Props> = (props) => {
     return {
       [SubscriptionFormField.NAME]: subscription?.name ?? '',
       [SubscriptionFormField.DESCRIPTION]: subscription?.description ?? '',
+      [SubscriptionFormField.BILLING_PERIOD_CYCLE]: subscription?.billingPeriodCycle ?? 1,
+      [SubscriptionFormField.BILLING_PERIOD_TYPE]:
+        subscription?.billingPeriodType ?? SubscriptionBillingPeriodType.MONTH,
     }
   }, [subscription])
 
@@ -48,6 +52,10 @@ export const SubscriptionForm: React.FC<Props> = (props) => {
         .max(128)
         .required(intl.formatMessage({ id: IntlTranslation.RequiredFormFieldMessage })),
       [SubscriptionFormField.DESCRIPTION]: Yup.string().max(1024).optional(),
+      [SubscriptionFormField.BILLING_PERIOD_CYCLE]: Yup.number().min(1).optional(),
+      [SubscriptionFormField.BILLING_PERIOD_TYPE]: Yup.mixed()
+        .oneOf(Object.values(SubscriptionBillingPeriodType))
+        .optional(),
     })
   }, [intl])
 
@@ -58,6 +66,8 @@ export const SubscriptionForm: React.FC<Props> = (props) => {
           id: subscription.id,
           name: values[SubscriptionFormField.NAME],
           description: values[SubscriptionFormField.DESCRIPTION],
+          billingPeriodCycle: values[SubscriptionFormField.BILLING_PERIOD_CYCLE],
+          billingPeriodType: values[SubscriptionFormField.BILLING_PERIOD_TYPE],
         })
 
         updateAccountSubscription(subscriptionUpdate)
@@ -65,6 +75,8 @@ export const SubscriptionForm: React.FC<Props> = (props) => {
         const newSubscription = new Subscription({
           name: values[SubscriptionFormField.NAME],
           description: values[SubscriptionFormField.DESCRIPTION],
+          billingPeriodCycle: values[SubscriptionFormField.BILLING_PERIOD_CYCLE],
+          billingPeriodType: values[SubscriptionFormField.BILLING_PERIOD_TYPE],
         })
 
         addSubscriptionToAccount(newSubscription)
@@ -80,6 +92,7 @@ export const SubscriptionForm: React.FC<Props> = (props) => {
           <Stack spacing={3}>
             <SubscriptionNameFormField />
             <SubscriptionDescriptionFormField />
+            <SubscriptionBillingPeriodFormField />
           </Stack>
         </DialogContent>
         <DialogActions>

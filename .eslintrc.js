@@ -23,5 +23,17 @@ module.exports = {
         "react/jsx-props-no-spreading": "off",
       },
     },
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "enumMember",
+            "format": ["UPPER_CASE", "PascalCase"],
+          },
+        ],
+      },
+    },
   ],
 }

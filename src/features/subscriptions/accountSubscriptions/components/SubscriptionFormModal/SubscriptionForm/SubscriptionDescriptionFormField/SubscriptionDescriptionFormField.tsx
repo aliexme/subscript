@@ -21,11 +21,11 @@ export const SubscriptionDescriptionFormField: React.FC<Props> = (props) => {
     <TextField
       {...field}
       label={intl.formatMessage({ id: IntlTranslation.SubscriptionDescriptionLabel })}
+      placeholder={intl.formatMessage({ id: IntlTranslation.SubscriptionDesdcriptionFormFieldPlaceholder })}
       size="small"
       multiline
       minRows={3}
-      error={!!meta.error}
-      helperText={meta.error}
+      error={meta.touched && !!meta.error}
       className={className}
     />
   )
