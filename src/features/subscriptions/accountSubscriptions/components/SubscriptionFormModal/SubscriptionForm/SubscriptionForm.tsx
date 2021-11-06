@@ -20,6 +20,7 @@ import { SubscriptionDescriptionFormField } from './SubscriptionDescriptionFormF
 import { SubscriptionBillingPeriodFormField } from './SubscriptionBillingPeriodFormField'
 
 import styles from './SubscriptionForm.css'
+import { SubscriptionBillingPeriodStartDateFormField } from './SubscriptionBillingPeriodStartDateFormField'
 
 type Props = {
   subscription?: Subscription
@@ -43,6 +44,7 @@ export const SubscriptionForm: React.FC<Props> = (props) => {
       [SubscriptionFormField.BILLING_PERIOD_CYCLE]: subscription?.billingPeriodCycle ?? 1,
       [SubscriptionFormField.BILLING_PERIOD_TYPE]:
         subscription?.billingPeriodType ?? SubscriptionBillingPeriodType.MONTH,
+      [SubscriptionFormField.BILLING_PERIOD_START_DATE]: subscription?.billingPeriodStartDate ?? new Date(),
     }
   }, [subscription])
 
@@ -56,6 +58,7 @@ export const SubscriptionForm: React.FC<Props> = (props) => {
       [SubscriptionFormField.BILLING_PERIOD_TYPE]: Yup.mixed()
         .oneOf(Object.values(SubscriptionBillingPeriodType))
         .optional(),
+      [SubscriptionFormField.BILLING_PERIOD_START_DATE]: Yup.date().optional(),
     })
   }, [intl])
 
@@ -68,6 +71,7 @@ export const SubscriptionForm: React.FC<Props> = (props) => {
           description: values[SubscriptionFormField.DESCRIPTION],
           billingPeriodCycle: values[SubscriptionFormField.BILLING_PERIOD_CYCLE],
           billingPeriodType: values[SubscriptionFormField.BILLING_PERIOD_TYPE],
+          billingPeriodStartDate: values[SubscriptionFormField.BILLING_PERIOD_START_DATE],
         })
 
         updateAccountSubscription(subscriptionUpdate)
@@ -77,6 +81,7 @@ export const SubscriptionForm: React.FC<Props> = (props) => {
           description: values[SubscriptionFormField.DESCRIPTION],
           billingPeriodCycle: values[SubscriptionFormField.BILLING_PERIOD_CYCLE],
           billingPeriodType: values[SubscriptionFormField.BILLING_PERIOD_TYPE],
+          billingPeriodStartDate: values[SubscriptionFormField.BILLING_PERIOD_START_DATE],
         })
 
         addSubscriptionToAccount(newSubscription)
@@ -89,10 +94,11 @@ export const SubscriptionForm: React.FC<Props> = (props) => {
     <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
       <Form className={className}>
         <DialogContent className={styles.dialogContent}>
-          <Stack spacing={3}>
+          <Stack spacing={4}>
             <SubscriptionNameFormField />
             <SubscriptionDescriptionFormField />
             <SubscriptionBillingPeriodFormField />
+            <SubscriptionBillingPeriodStartDateFormField />
           </Stack>
         </DialogContent>
         <DialogActions>

@@ -8,7 +8,10 @@ export enum SubscriptionBillingPeriodType {
   YEAR = 'YEAR',
 }
 
-type SubscriptionConstructorParams = PartialProp<Subscription, 'id' | 'billingPeriodCycle' | 'billingPeriodType'>
+type SubscriptionConstructorParams = PartialProp<
+  Subscription,
+  'id' | 'billingPeriodCycle' | 'billingPeriodType' | 'billingPeriodStartDate'
+>
 
 export class Subscription {
   id: EntityId
@@ -16,6 +19,7 @@ export class Subscription {
   description?: string
   billingPeriodCycle: number
   billingPeriodType: SubscriptionBillingPeriodType
+  billingPeriodStartDate: Date
 
   constructor(params: SubscriptionConstructorParams) {
     this.id = params.id ?? generateEntityId()
@@ -23,5 +27,6 @@ export class Subscription {
     this.description = params.description
     this.billingPeriodCycle = params.billingPeriodCycle ?? 1
     this.billingPeriodType = params.billingPeriodType ?? SubscriptionBillingPeriodType.MONTH
+    this.billingPeriodStartDate = params.billingPeriodStartDate ?? new Date()
   }
 }

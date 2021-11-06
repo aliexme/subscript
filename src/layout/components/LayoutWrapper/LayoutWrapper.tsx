@@ -1,12 +1,16 @@
 import React from 'react'
 
-import { MuiThemeProvider } from 'shared/lib/mui'
+import { MuiLocalizationProvider, MuiThemeProvider } from 'shared/lib/mui'
 import type { ObjectType } from 'shared/utils/objects'
 
 export const LayoutWrapper: React.FC = (props) => {
   const { children } = props
 
-  return <MuiThemeProvider>{children}</MuiThemeProvider>
+  return (
+    <MuiThemeProvider>
+      <MuiLocalizationProvider>{children}</MuiLocalizationProvider>
+    </MuiThemeProvider>
+  )
 }
 
 export const layoutWrapper = <P extends ObjectType>(

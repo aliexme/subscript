@@ -25,6 +25,7 @@ export const en: IntlTranslations = {
   [IntlTranslation.SubscriptionDesdcriptionFormFieldPlaceholder]: 'e.g. Premium plan',
   [IntlTranslation.SubscriptionBillingPeriodFormFieldLabel]: 'Billing period',
   [IntlTranslation.SubscriptionBillingPeriodFormFieldsPrefix]: 'Every',
+  [IntlTranslation.SubscriptionBillingPeriodStartDateLabel]: 'First payment',
   [IntlTranslation.AddSubscriptionButtonLabel]: 'Add',
   [IntlTranslation.AccountSubscriptionsCardTitle]: 'Subscriptions',
 }

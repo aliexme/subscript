@@ -22,6 +22,7 @@ export enum IntlTranslation {
   SubscriptionDesdcriptionFormFieldPlaceholder = 'SubscriptionDesdcriptionFormFieldPlaceholder',
   SubscriptionBillingPeriodFormFieldLabel = 'SubscriptionBillingPeriodFormFieldLabel',
   SubscriptionBillingPeriodFormFieldsPrefix = 'SubscriptionBillingPeriodFormFieldsPrefix',
+  SubscriptionBillingPeriodStartDateLabel = 'SubscriptionBillingPeriodStartDateLabel',
   AddSubscriptionButtonLabel = 'AddSubscriptionButtonLabel',
   AccountSubscriptionsCardTitle = 'AccountSubscriptionsCardTitle',
 }

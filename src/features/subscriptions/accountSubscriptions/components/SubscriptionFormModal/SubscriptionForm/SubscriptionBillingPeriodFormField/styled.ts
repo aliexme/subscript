@@ -4,5 +4,5 @@ import { FormLabel } from 'shared/UIKit/Form'
 
 export const StyledFormLabel = styled(FormLabel)(({ theme }) => ({
   display: 'block',
-  marginBottom: theme.spacing(1),
+  marginBottom: theme.spacing(2),
 }))

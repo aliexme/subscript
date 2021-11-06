@@ -22,9 +22,10 @@ export const ru: IntlTranslations = {
   [IntlTranslation.SubscriptionBillingPeriodTypeYear]: 'Год',
   [IntlTranslation.NewSubscriptionFormModalTitle]: 'Новая подписка',
   [IntlTranslation.SubscriptionNameFormFieldPlaceholder]: 'Например, Netflix',
-  [IntlTranslation.SubscriptionDesdcriptionFormFieldPlaceholder]: 'Например, Премиум-план',
+  [IntlTranslation.SubscriptionDesdcriptionFormFieldPlaceholder]: 'Например, Premium plan',
   [IntlTranslation.SubscriptionBillingPeriodFormFieldLabel]: 'Расчетный период',
   [IntlTranslation.SubscriptionBillingPeriodFormFieldsPrefix]: 'Каждый',
+  [IntlTranslation.SubscriptionBillingPeriodStartDateLabel]: 'Дата первой оплаты',
   [IntlTranslation.AddSubscriptionButtonLabel]: 'Добавить',
   [IntlTranslation.AccountSubscriptionsCardTitle]: 'Подписки',
 }

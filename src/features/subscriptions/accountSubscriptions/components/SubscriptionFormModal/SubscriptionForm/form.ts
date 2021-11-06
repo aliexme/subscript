@@ -5,6 +5,7 @@ export enum SubscriptionFormField {
   DESCRIPTION = 'DESCRIPTION',
   BILLING_PERIOD_CYCLE = 'BILLING_PERIOD_CYCLE',
   BILLING_PERIOD_TYPE = 'BILLING_PERIOD_TYPE',
+  BILLING_PERIOD_START_DATE = 'BILLING_PERIOD_START_DATE',
 }
 
 export type SubscriptionFormValues = {
@@ -12,4 +13,5 @@ export type SubscriptionFormValues = {
   [SubscriptionFormField.DESCRIPTION]?: string
   [SubscriptionFormField.BILLING_PERIOD_CYCLE]?: number
   [SubscriptionFormField.BILLING_PERIOD_TYPE]?: SubscriptionBillingPeriodType
+  [SubscriptionFormField.BILLING_PERIOD_START_DATE]?: Date
 }
