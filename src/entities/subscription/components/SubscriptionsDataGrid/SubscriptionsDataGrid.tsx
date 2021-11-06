@@ -22,9 +22,10 @@ export const SubscriptionsDataGrid: React.FC<SubscriptionsDataGridProps> = (prop
       {
         field: 'name',
         headerName: intl.formatMessage({ id: IntlTranslation.SubscriptionNameLabel }),
+        flex: 1,
       },
     ]
   }, [intl])
 
-  return <DataGrid rows={subscriptions} columns={columns} {...dataGridProps} />
+  return <DataGrid rows={subscriptions} columns={columns} disableColumnMenu {...dataGridProps} />
 }

@@ -11,18 +11,19 @@ type Props = {
   className?: string
 }
 
-export const SubscriptionNameFormField: React.FC<Props> = (props) => {
+export const SubscriptionDescriptionFormField: React.FC<Props> = (props) => {
   const { className } = props
 
   const intl = useIntl()
-  const [field, meta] = useField(SubscriptionFormField.NAME)
+  const [field, meta] = useField(SubscriptionFormField.DESCRIPTION)
 
   return (
     <TextField
       {...field}
-      label={intl.formatMessage({ id: IntlTranslation.SubscriptionNameLabel })}
+      label={intl.formatMessage({ id: IntlTranslation.SubscriptionDescriptionLabel })}
       size="small"
-      required
+      multiline
+      minRows={3}
       error={!!meta.error}
       helperText={meta.error}
       className={className}

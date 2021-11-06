@@ -12,6 +12,7 @@ export enum IntlTranslation {
   DarkThemeName = 'DarkThemeName',
   DataGridNoRowsLabel = 'DataGridNoRowsLabel',
   SubscriptionNameLabel = 'SubscriptionNameLabel',
+  SubscriptionDescriptionLabel = 'SubscriptionDescriptionLabel',
   NewSubscriptionFormModalTitle = 'NewSubscriptionFormModalTitle',
   AddSubscriptionButtonLabel = 'AddSubscriptionButtonLabel',
   AccountSubscriptionsCardTitle = 'AccountSubscriptionsCardTitle',

@@ -15,7 +15,8 @@ import { filterUndefinedObjectValues } from 'shared/utils/objects'
 import { addSubscriptionToAccountAction, updateAccountSubscriptionAction } from '../../../model'
 import { SubscriptionFormField } from './form'
 import type { SubscriptionFormValues } from './form'
-import { SubscriptionNameFormField } from './SubscriptionNameFormField/SubscriptionNameFormField'
+import { SubscriptionNameFormField } from './SubscriptionNameFormField'
+import { SubscriptionDescriptionFormField } from './SubscriptionDescriptionFormField'
 
 import styles from './SubscriptionForm.css'
 
@@ -37,14 +38,16 @@ export const SubscriptionForm: React.FC<Props> = (props) => {
   const initialValues = useMemo<SubscriptionFormValues>(() => {
     return {
       [SubscriptionFormField.NAME]: subscription?.name ?? '',
+      [SubscriptionFormField.DESCRIPTION]: subscription?.description ?? '',
     }
   }, [subscription])
 
   const validationSchema = useMemo<SchemaOf<SubscriptionFormValues>>(() => {
     return Yup.object().shape({
-      [SubscriptionFormField.NAME]: Yup.string().required(
-        intl.formatMessage({ id: IntlTranslation.RequiredFormFieldMessage })
-      ),
+      [SubscriptionFormField.NAME]: Yup.string()
+        .max(128)
+        .required(intl.formatMessage({ id: IntlTranslation.RequiredFormFieldMessage })),
+      [SubscriptionFormField.DESCRIPTION]: Yup.string().max(1024).optional(),
     })
   }, [intl])
 
@@ -54,11 +57,16 @@ export const SubscriptionForm: React.FC<Props> = (props) => {
         const subscriptionUpdate: EntityUpdate<Subscription> = filterUndefinedObjectValues({
           id: subscription.id,
           name: values[SubscriptionFormField.NAME],
+          description: values[SubscriptionFormField.DESCRIPTION],
         })
 
         updateAccountSubscription(subscriptionUpdate)
       } else {
-        const newSubscription = new Subscription({ name: values[SubscriptionFormField.NAME] })
+        const newSubscription = new Subscription({
+          name: values[SubscriptionFormField.NAME],
+          description: values[SubscriptionFormField.DESCRIPTION],
+        })
+
         addSubscriptionToAccount(newSubscription)
       }
     },
@@ -69,8 +77,9 @@ export const SubscriptionForm: React.FC<Props> = (props) => {
     <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
       <Form className={className}>
         <DialogContent className={styles.dialogContent}>
-          <Stack spacing={2}>
+          <Stack spacing={3}>
             <SubscriptionNameFormField />
+            <SubscriptionDescriptionFormField />
           </Stack>
         </DialogContent>
         <DialogActions>

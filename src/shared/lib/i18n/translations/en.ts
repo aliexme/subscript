@@ -15,6 +15,7 @@ export const en: IntlTranslations = {
   [IntlTranslation.DarkThemeName]: 'Dark',
   [IntlTranslation.DataGridNoRowsLabel]: 'No data',
   [IntlTranslation.SubscriptionNameLabel]: 'Name',
+  [IntlTranslation.SubscriptionDescriptionLabel]: 'Description',
   [IntlTranslation.NewSubscriptionFormModalTitle]: 'New subscription',
   [IntlTranslation.AddSubscriptionButtonLabel]: 'Add',
   [IntlTranslation.AccountSubscriptionsCardTitle]: 'Subscriptions',
