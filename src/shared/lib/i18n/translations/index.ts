@@ -17,6 +17,7 @@ export enum IntlTranslation {
   SubscriptionBillingPeriodTypeWeek = 'SubscriptionBillingPeriodTypeWeek',
   SubscriptionBillingPeriodTypeMonth = 'SubscriptionBillingPeriodTypeMonth',
   SubscriptionBillingPeriodTypeYear = 'SubscriptionBillingPeriodTypeYear',
+  SubscriptionNextPaymentDateLabel = 'SubscriptionNextPaymentDateLabel',
   NewSubscriptionFormModalTitle = 'NewSubscriptionFormModalTitle',
   SubscriptionNameFormFieldPlaceholder = 'SubscriptionNameFormFieldPlaceholder',
   SubscriptionDesdcriptionFormFieldPlaceholder = 'SubscriptionDesdcriptionFormFieldPlaceholder',

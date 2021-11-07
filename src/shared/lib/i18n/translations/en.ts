@@ -20,6 +20,7 @@ export const en: IntlTranslations = {
   [IntlTranslation.SubscriptionBillingPeriodTypeWeek]: 'Week',
   [IntlTranslation.SubscriptionBillingPeriodTypeMonth]: 'Month',
   [IntlTranslation.SubscriptionBillingPeriodTypeYear]: 'Year',
+  [IntlTranslation.SubscriptionNextPaymentDateLabel]: 'Until next payment',
   [IntlTranslation.NewSubscriptionFormModalTitle]: 'New subscription',
   [IntlTranslation.SubscriptionNameFormFieldPlaceholder]: 'e.g. Netflix',
   [IntlTranslation.SubscriptionDesdcriptionFormFieldPlaceholder]: 'e.g. Premium plan',

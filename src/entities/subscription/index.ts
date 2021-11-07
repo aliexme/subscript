@@ -1,3 +1,2 @@
-export * from './models'
-export * from './stores'
+export * from './model'
 export * from './components'

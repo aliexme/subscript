@@ -9,7 +9,7 @@ import {
   removeEntitiesFromIRecord,
 } from 'shared/utils/entities'
 
-import type { Subscription } from './models'
+import type { Subscription } from './Subscription'
 
 export type SubscriptionsMap = EntitiesRecord<Subscription>
 

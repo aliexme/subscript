@@ -6,7 +6,7 @@ import { TextField } from 'shared/UIKit/TextField'
 import type { TextFieldProps } from 'shared/UIKit/TextField'
 import { MenuItem } from 'shared/UIKit/Menu'
 
-import { SubscriptionBillingPeriodType } from '../../models'
+import { SubscriptionBillingPeriodType } from '../../model'
 
 export type SubscriptionBillingPeriodTypeSelectProps = TextFieldProps
 
