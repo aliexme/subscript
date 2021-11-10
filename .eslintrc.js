@@ -15,6 +15,7 @@ module.exports = {
       "newlines-between": "always-and-inside-groups",
       "warnOnUnassignedImports": true,
     }],
+    "jest/expect-expect": "off",
   },
   "overrides": [
     {

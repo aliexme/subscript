@@ -1,6 +1,8 @@
 const { startCli } = require('@tramvai/test-integration')
 
 describe('subscript', () => {
+  let app
+
   beforeAll(async () => {
     app = await startCli('subscript')
   }, 80000)
